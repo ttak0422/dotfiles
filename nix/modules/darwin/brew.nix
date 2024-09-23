@@ -33,6 +33,9 @@ rec {
     brews = [ "lunchy" ];
     casks = [
       "aquaskk"
+      "font-plemol-jp"
+      "font-plemol-jp-hs"
+      "font-plemol-jp-nf"
     ];
     onActivation = {
       cleanup = "zap";

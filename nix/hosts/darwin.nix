@@ -46,6 +46,7 @@
                 imports = [
                   ./../modules/hm/git.nix
                   ./../modules/hm-darwin/prelude.nix
+                  ./../modules/hm-darwin/neovide.nix
                   ./../modules/hm-darwin/wezterm.nix
                 ];
                 home = {
