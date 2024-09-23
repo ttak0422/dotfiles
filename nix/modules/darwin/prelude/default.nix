@@ -1,9 +1,10 @@
-{ username, pkgs, ... }:
+{ user, pkgs, ... }:
 {
   imports = [ ];
   services.nix-daemon.enable = true;
   system.stateVersion = 5;
-  users.users.${username}.home = "/Users/${username}";
+  users.users.${user}.home = "/Users/${user}";
+  users.users.nix-infra.home = "/Users/${user}";
   programs.zsh.enable = true;
   environment.systemPackages = with pkgs; [
     (runCommand "gsed" { } ''

@@ -2313,14 +2313,17 @@
         "winshift-nvim": "winshift-nvim"
       },
       "locked": {
-        "lastModified": 1727028270,
-        "narHash": "sha256-q14kZ7GDFqpINx7zSrDmRx7uSnGyycmcGRWIB41qqfc=",
-        "path": "/Users/ttak0422/ghq/github.com/ttak0422/dotfiles-nvim",
-        "type": "path"
+        "lastModified": 1726924710,
+        "narHash": "sha256-avPM2sp5MAMjExnbkMODTbobmtx5llu6PoUMDctZcvQ=",
+        "owner": "ttak0422",
+        "repo": "dotfiles-nvim",
+        "rev": "33b1b34ce0a8f828e0c6da8dec6aced1d8f2f8d7",
+        "type": "github"
       },
       "original": {
-        "path": "/Users/ttak0422/ghq/github.com/ttak0422/dotfiles-nvim",
-        "type": "path"
+        "owner": "ttak0422",
+        "repo": "dotfiles-nvim",
+        "type": "github"
       }
     },
     "dotfyle-metadata-nvim": {
@@ -4284,11 +4287,11 @@
     },
     "nixpkgs_3": {
       "locked": {
-        "lastModified": 1724224976,
-        "narHash": "sha256-Z/ELQhrSd7bMzTO8r7NZgi9g5emh+aRKoCdaAv5fiO0=",
+        "lastModified": 1726937504,
+        "narHash": "sha256-bvGoiQBvponpZh8ClUcmJ6QnsNKw0EMrCQJARK3bI1c=",
         "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "c374d94f1536013ca8e92341b540eba4c22f9c62",
+        "rev": "9357f4f23713673f310988025d9dc261c20e70c6",
         "type": "github"
       },
       "original": {
