@@ -36,6 +36,8 @@ rec {
       "font-plemol-jp"
       "font-plemol-jp-hs"
       "font-plemol-jp-nf"
+      "google-chrome"
+      "firefox"
     ];
     onActivation = {
       cleanup = "zap";
