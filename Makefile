@@ -16,13 +16,13 @@ if_command_exists = \
 
 .PHONY: help
 help:
-	@echo "dotfiles v5"
+		@echo "dotfiles v5"
 
 .PHONY: install-nix
 install-nix:
-	$(call if_command_exists,nix,\
-		:,\
-		$(call fail,"TODO: setup `install-nix`"))
+		$(call if_command_exists,nix,\
+			:,\
+			$(call fail,"TODO: setup `install-nix`"))
 
 .PHONY: clean-nix-builtin-conf
 clean-nix-builtin-conf:
@@ -34,13 +34,4 @@ build-nix-darwin: install-nix
 
 .PHONY: apply-nix-darwin
 apply-nix-darwin: clean-nix-builtin-conf build-nix-darwin
-	./result/sw/bin/darwin-rebuild switch --flake .#darwin
-
-
-# .PHONY: apply-nix-darwin
-# apply-nix-darwin: install-nix clean-nix-builtin-conf
-# 		$(call if_command_exists,darwin-rebuild,\
-# 			:,\
-# 			nix --experimental-features 'nix-command flakes' build '.?submodules=true#darwinConfigurations.darwinM1.system';\
-#
-# 		)
+		./result/sw/bin/darwin-rebuild switch --flake .#darwin
