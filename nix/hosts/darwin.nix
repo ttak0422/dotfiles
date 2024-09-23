@@ -18,8 +18,9 @@
       user = "tak";
       specialArgs =
         {
-          inherit self;
           inherit system;
+          inherit self;
+          inherit inputs;
           inherit self';
           inherit inputs';
         }
@@ -44,6 +45,8 @@
               users.${user} = {
                 imports = [
                   ./../modules/hm/git.nix
+                  ./../modules/hm-darwin/prelude.nix
+                  ./../modules/hm-darwin/wezterm.nix
                 ];
                 home = {
                   username = user;
