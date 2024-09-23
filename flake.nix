@@ -25,6 +25,14 @@
       url = "github:reckenrode/mkAlias";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    nix-homebrew = {
+      url = "github:zhaofengli-wip/nix-homebrew";
+      inputs = {
+        nixpkgs.follows = "nixpkgs";
+        nix-darwin.follows = "darwin";
+        flake-utils.follows = "flake-utils";
+      };
+    };
     homebrew-core = {
       url = "github:homebrew/homebrew-core";
       flake = false;

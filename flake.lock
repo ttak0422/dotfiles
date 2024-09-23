@@ -178,6 +178,23 @@
         "type": "github"
       }
     },
+    "brew-src": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1718075954,
+        "narHash": "sha256-4TeUhv5VLEufP+Z/NkKnUk4NUaf59cMsj6NvsVbE+8w=",
+        "owner": "Homebrew",
+        "repo": "brew",
+        "rev": "3f08c75e7b950d4340dab462f3e7f77e8093fa2b",
+        "type": "github"
+      },
+      "original": {
+        "owner": "Homebrew",
+        "ref": "4.3.5",
+        "repo": "brew",
+        "type": "github"
+      }
+    },
     "btw-nvim": {
       "flake": false,
       "locked": {
@@ -4185,6 +4202,33 @@
         "type": "github"
       }
     },
+    "nix-homebrew": {
+      "inputs": {
+        "brew-src": "brew-src",
+        "flake-utils": [
+          "flake-utils"
+        ],
+        "nix-darwin": [
+          "darwin"
+        ],
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1719720211,
+        "narHash": "sha256-FNK5ZxmNC+V/wOuioc5HqkUy0ld4eW3NqcsZHLYg9HI=",
+        "owner": "zhaofengli-wip",
+        "repo": "nix-homebrew",
+        "rev": "0afc51fd86693c73e4b60be8ed8c782c4c09b4cc",
+        "type": "github"
+      },
+      "original": {
+        "owner": "zhaofengli-wip",
+        "repo": "nix-homebrew",
+        "type": "github"
+      }
+    },
     "nix-vscode-extensions": {
       "inputs": {
         "flake-compat": "flake-compat_4",
@@ -5183,6 +5227,7 @@
         "homebrew-cask-fonts": "homebrew-cask-fonts",
         "homebrew-core": "homebrew-core",
         "mkAlias": "mkAlias",
+        "nix-homebrew": "nix-homebrew",
         "nixpkgs": "nixpkgs_4",
         "nixpkgs-unstable": "nixpkgs-unstable",
         "systems": "systems_4",

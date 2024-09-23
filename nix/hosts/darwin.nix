@@ -37,7 +37,7 @@
           ./../modules/shared/prelude.nix
           ./../modules/shared/nvim.nix
           ./../modules/darwin/prelude
-
+          ./../modules/darwin/brew.nix
           {
             home-manager = {
               useUserPackages = true;
