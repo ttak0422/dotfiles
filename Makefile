@@ -26,11 +26,11 @@ install-nix:
 
 .PHONY: install-rosetta
 install-rosetta:
-	@if /usr/bin/pgrep oahd >/dev/null 2>&1; then \
-		softwareupdate --install-rosetta --agree-to-license; \
-	else \
-		:; \
-	fi
+		@if /usr/bin/pgrep oahd >/dev/null 2>&1; then \
+				softwareupdate --install-rosetta --agree-to-license; \
+		else \
+				:; \
+		fi
 
 .PHONY: clean-nix-builtin-conf
 clean-nix-builtin-conf:
