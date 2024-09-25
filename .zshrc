@@ -18,3 +18,16 @@ setopt pushd_ignore_dups
 
 setopt list_packed
 setopt list_types
+
+alias g='cd $(ghq root)/$(ghq list | fzf)';
+alias gg="ghq get"
+alias cat="bat"
+alias ls="eza"
+alias tree="eza -T"
+
+fpath+=("$HOME/.zsh/plugins/pure/share/zsh/site-functions")
+autoload -U promptinit; promptinit
+zstyle :prompt:error color '#F5C77E'
+zstyle :prompt:success color '#87CEEB'
+PURE_PROMPT_SYMBOL="❯❯❯"
+prompt pure

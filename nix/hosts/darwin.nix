@@ -45,6 +45,7 @@
               users.${user} = {
                 imports = [
                   ./../modules/hm/git.nix
+                  ./../modules/hm/shell
                   ./../modules/hm-darwin/prelude.nix
                   ./../modules/hm-darwin/neovide.nix
                   ./../modules/hm-darwin/wezterm.nix

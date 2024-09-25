@@ -7,6 +7,6 @@ export PATH=~/.npm-packages/bin:$PATH
 export VOLTA_HOME=$HOME/.volta
 export PATH=$VOLTA_HOME/bin:$PATH
 
-if [ "$(uname)" == 'Darwin' ]; then
-  export PATH=$PATH:/opt/homebrew/bin
+if [[ -f /opt/homebrew/bin/brew ]]; then
+  eval $(/opt/homebrew/bin/brew shellenv)
 fi
