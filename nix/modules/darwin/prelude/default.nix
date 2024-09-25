@@ -1,6 +1,12 @@
 { user, pkgs, ... }:
 {
-  imports = [ ];
+  imports = [
+    ./dock.nix
+    ./finder.nix
+    ./keyboard.nix
+    ./loginwindow.nix
+    ./ng-global.nix
+  ];
   services.nix-daemon.enable = true;
   system.stateVersion = 5;
   users.users.${user}.home = "/Users/${user}";
