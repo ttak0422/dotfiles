@@ -37,6 +37,7 @@
           ./../modules/shared/prelude.nix
           ./../modules/shared/nvim.nix
           ./../modules/darwin/prelude
+          ./../modules/darwin/service/skk.nix
           ./../modules/darwin/brew.nix
           {
             home-manager = {

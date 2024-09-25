@@ -56,9 +56,20 @@
       inputs.nixpkgs.follows = "nixpkgs";
       inputs.flake-utils.follows = "flake-utils";
     };
+    skk-dev-dict = {
+      url = "github:skk-dev/dict";
+      flake = false;
+    };
 
     # MY PACKAGES
     dotfiles-nvim.url = "github:ttak0422/dotfiles-nvim";
+    yaskkserv2-service = {
+      url = "github:ttak0422/yaskkserv2-service";
+      inputs = {
+        nixpkgs.follows = "nixpkgs";
+        flake-parts.follows = "flake-parts";
+      };
+    };
   };
 
   outputs =
