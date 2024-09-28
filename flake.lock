@@ -2351,11 +2351,11 @@
         "winshift-nvim": "winshift-nvim"
       },
       "locked": {
-        "lastModified": 1726924710,
-        "narHash": "sha256-avPM2sp5MAMjExnbkMODTbobmtx5llu6PoUMDctZcvQ=",
+        "lastModified": 1727514805,
+        "narHash": "sha256-eYiPAAjqBueFDFFPvo4Lu+9GcVlBbiu+/JRhkjBZ3Fc=",
         "owner": "ttak0422",
         "repo": "dotfiles-nvim",
-        "rev": "33b1b34ce0a8f828e0c6da8dec6aced1d8f2f8d7",
+        "rev": "94e92e44ea2e4d0b6709c9e6644780acacea43a5",
         "type": "github"
       },
       "original": {
@@ -4394,11 +4394,11 @@
     },
     "nixpkgs_3": {
       "locked": {
-        "lastModified": 1726937504,
-        "narHash": "sha256-bvGoiQBvponpZh8ClUcmJ6QnsNKw0EMrCQJARK3bI1c=",
+        "lastModified": 1724224976,
+        "narHash": "sha256-Z/ELQhrSd7bMzTO8r7NZgi9g5emh+aRKoCdaAv5fiO0=",
         "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "9357f4f23713673f310988025d9dc261c20e70c6",
+        "rev": "c374d94f1536013ca8e92341b540eba4c22f9c62",
         "type": "github"
       },
       "original": {
@@ -4443,11 +4443,11 @@
     "noice-nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1721898430,
-        "narHash": "sha256-86oWl3XGuuVhaWVe6egjc7Mt8Pp7qpTMJ2EZiNlztt8=",
+        "lastModified": 1726684593,
+        "narHash": "sha256-pEqwY5myzknlgI3PO8xX1m/I27zgrB6kST/u7BDLCWM=",
         "owner": "folke",
         "repo": "noice.nvim",
-        "rev": "448bb9c524a7601035449210838e374a30153172",
+        "rev": "c1ba80ccf6b3bd8c7fc88fe2e61085131d44ad65",
         "type": "github"
       },
       "original": {

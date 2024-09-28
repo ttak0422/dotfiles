@@ -32,6 +32,10 @@ install-rosetta:
 				:; \
 		fi
 
+.PHONY: update-dotfiles-nvim
+update-dotfiles-nvim: install-nix
+		nix flake lock --update-input dotfiles-nvim
+
 .PHONY: clean-nix-builtin-conf
 clean-nix-builtin-conf:
 		@if [ -f $(NIX_CONF_PATH) ] && [ ! -L $(NIX_CONF_PATH) ]; then sudo rm -rf $(NIX_CONF_PATH); fi
@@ -43,3 +47,6 @@ build-nix-darwin: install-nix install-rosetta
 .PHONY: apply-nix-darwin
 apply-nix-darwin: clean-nix-builtin-conf build-nix-darwin
 		./result/sw/bin/darwin-rebuild switch --flake .#darwin
+
+.PHONY: apply-latest-nvim-darwin
+apply-latest-nvim-darwin: update-dotfiles-nvim apply-nix-darwin

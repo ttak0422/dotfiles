@@ -2,7 +2,7 @@
   imports = [
     ./direnv.nix
     ./navi.nix
-    ./zellij.nix
+    ./zellij
     ./zoxide.nix
     ./zsh.nix
   ];
