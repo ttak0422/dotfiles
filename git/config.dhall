@@ -8,6 +8,7 @@
     ignorecase = false
     untrackedcache = true
     fsmonitor = false
+    editor = nvim
   [color]
     gi = auto
   [init]
