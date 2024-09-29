@@ -49,7 +49,8 @@
                   ./../modules/hm-darwin/neovide.nix
                   ./../modules/hm-darwin/prelude.nix
                   ./../modules/hm-darwin/wezterm.nix
-                  ./../modules/hm/git.nix
+                  ./../modules/hm/dev
+                  ./../modules/hm/git
                   ./../modules/hm/shell
                   ./../modules/hm/tool
                 ];

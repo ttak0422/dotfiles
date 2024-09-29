@@ -40,12 +40,20 @@ update-dotfiles-nvim: install-nix
 clean-nix-builtin-conf:
 		@if [ -f $(NIX_CONF_PATH) ] && [ ! -L $(NIX_CONF_PATH) ]; then sudo rm -rf $(NIX_CONF_PATH); fi
 
-.PHONY: buid-nix-darwin
+.PHONY: build-nix-darwin
 build-nix-darwin: install-nix install-rosetta
 		nix --experimental-features 'nix-command flakes' build '.?submodules=true#darwinConfigurations.darwin.system'
 
+.PHONY: build-nix-darwin-with-trace
+build-nix-darwin-with-trace: install-nix install-rosetta
+		nix --experimental-features 'nix-command flakes' build '.?submodules=true#darwinConfigurations.darwin.system' --show-trace
+
 .PHONY: apply-nix-darwin
 apply-nix-darwin: clean-nix-builtin-conf build-nix-darwin
+		./result/sw/bin/darwin-rebuild switch --flake .#darwin
+
+.PHONY: apply-nix-darwin-with-trace
+apply-nix-darwin-with-trace: clean-nix-builtin-conf build-nix-darwin-with-trace
 		./result/sw/bin/darwin-rebuild switch --flake .#darwin
 
 .PHONY: apply-latest-nvim-darwin
