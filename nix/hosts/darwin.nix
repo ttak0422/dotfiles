@@ -46,11 +46,12 @@
               useGlobalPkgs = true;
               users.${user} = {
                 imports = [
+                  ./../modules/hm-darwin/neovide.nix
+                  ./../modules/hm-darwin/prelude.nix
+                  ./../modules/hm-darwin/wezterm.nix
                   ./../modules/hm/git.nix
                   ./../modules/hm/shell
-                  ./../modules/hm-darwin/prelude.nix
-                  ./../modules/hm-darwin/neovide.nix
-                  ./../modules/hm-darwin/wezterm.nix
+                  ./../modules/hm/tool
                 ];
                 home = {
                   username = user;

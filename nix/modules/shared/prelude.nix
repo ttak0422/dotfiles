@@ -5,8 +5,6 @@
   ...
 }:
 let
-  inherit (pkgs.stdenv) isDarwin;
-  inherit (lib.attrsets) optionalAttrs;
   inherit (inputs.yaskkserv2-service.packages.${pkgs.stdenv.hostPlatform.system}) yaskkserv2;
 in
 {
@@ -17,12 +15,17 @@ in
       options = "--delete-older-than 10d";
     };
     settings = {
-      experimental-features = ''
-        nix-command flakes
-      '';
+      experimental-features = [
+        "nix-command"
+        "flakes"
+        "repl-flake"
+      ];
       substituters = [ "https://nix-community.cachix.org" ];
       trusted-public-keys = [ "nix-community.cachix.org-1:mB9FSh9qf2dCimDSUo8Zy7bkq5CX+/rkCWyvRCYg3Fs=" ];
-    } // optionalAttrs isDarwin { extra-platforms = "aarch64-darwin x86_64-darwin"; };
+    };
+    extraOptions = ''
+      ${if pkgs.stdenv.isDarwin then "extra-platforms = aarch64-darwin x86_64-darwin" else ""}
+    '';
   };
   nixpkgs = {
     overlays = [
@@ -33,6 +36,10 @@ in
         in
         {
           pkgs-x86_64-darwin = import inputs.nixpkgs {
+            system = "x86_64-darwin";
+            config.allowUnfree = true;
+          };
+          pkgs-x86_64-darwin-unstable = import inputs.nixpkgs-unstable {
             system = "x86_64-darwin";
             config.allowUnfree = true;
           };
