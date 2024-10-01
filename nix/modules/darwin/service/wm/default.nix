@@ -1,6 +1,6 @@
 {
   imports = [
-    ./sketchybar.nix
+    ./sketchybar
     ./skhd.nix
     # ./spacebar.nix
     ./yabai.nix
