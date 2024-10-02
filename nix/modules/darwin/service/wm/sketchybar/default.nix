@@ -7,28 +7,46 @@
       PLUGIN_DIR="${./plugins}"
 
       ##### Bar Appearance #####
-      sketchybar --bar position=top height=40 blur_radius=30 color=0x40000000
+      sketchybar --bar position=top \
+          y_offset=0 \
+          blur_radius=30 \
+          height=40 \
+          position=top \
+          padding_left=4 \
+          padding_right=4 \
+          margin=0 \
+          corner_radius=0
 
       ##### Changing Defaults #####
       default=(
         padding_left=5
         padding_right=5
-        icon.font="PlemolJP Console NF:Bold:17.0"
-        label.font="PlemolJP Console NF:Bold:14.0"
+        icon.font="PlemolJP Console NF:Bold:16.0"
+        label.font="PlemolJP Console NF:Bold:16.0"
         icon.color=0xffffffff
         label.color=0xffffffff
         icon.padding_left=4
         icon.padding_right=4
         label.padding_left=4
         label.padding_right=4
+        background.corner_radius=5
       )
       sketchybar --default "''\${default[@]}"
 
-      ##### Adding Mission Control Space Indicators #####
-      SPACE_ICONS=("1" "2" "3" "4" "5" "6" "7" "8" "9" "10")
+      sketchybar --add item chevron left \
+                 --set chevron icon= label.drawing=off \
+                 --add item front_app left \
+                 --set front_app icon.drawing=off script="$PLUGIN_DIR/front_app.sh" \
+                 --subscribe front_app front_app_switched
+
+        sketchybar --add item battery right \
+            --set battery update_freq=120 script="$PLUGIN_DIR/battery.sh" \
+            --subscribe battery system_woke power_source_change
+
+      SPACE_ICONS=("10" "9" "8" "7" "6" "5" "4" "3" "2" "1")
       for i in "''\${!SPACE_ICONS[@]}"
       do
-        sid="$(($i+1))"
+        sid="$((10-$i))"
         space=(
           space="$sid"
           icon="''\${SPACE_ICONS[i]}"
@@ -41,22 +59,8 @@
           script="$PLUGIN_DIR/space.sh"
           click_script="yabai -m space --focus $sid"
         )
-        sketchybar --add space space."$sid" left --set space."$sid" "''\${space[@]}"
+        sketchybar --add space space."$sid" right --set space."$sid" "''\${space[@]}"
       done
-
-      ##### Adding Left Items #####
-      sketchybar --add item chevron left \
-                 --set chevron icon= label.drawing=off \
-                 --add item front_app left \
-                 --set front_app icon.drawing=off script="$PLUGIN_DIR/front_app.sh" \
-                 --subscribe front_app front_app_switched
-
-      ##### Adding Right Items #####
-      sketchybar --add item clock right \
-                 --set clock update_freq=10 script="$PLUGIN_DIR/clock.sh" \
-                 --add item battery right \
-                 --set battery update_freq=120 script="$PLUGIN_DIR/battery.sh" \
-                 --subscribe battery system_woke power_source_change
 
       ##### Force all scripts to run the first time (never do this in a script) #####
       sketchybar --update
