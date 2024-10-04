@@ -33,11 +33,12 @@ rec {
     brews = [ "lunchy" ];
     casks = [
       "aquaskk"
+      "firefox"
       "font-plemol-jp"
       "font-plemol-jp-hs"
       "font-plemol-jp-nf"
       "google-chrome"
-      "firefox"
+      "neovide"
     ];
     onActivation = {
       cleanup = "zap";

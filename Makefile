@@ -32,6 +32,20 @@ install-rosetta:
 				:; \
 		fi
 
+.PHONY: setup-default-key-binding-dict
+setup-default-key-binding-dict:
+		@if [ ! -f /Library/KeyBindings/DefaultKeyBinding.dict ]; then \
+				sudo mkdir -p /Library/KeyBindings; \
+				sudo cp Library/KeyBindings/DefaultKeyBinding.dict /Library/KeyBindings/DefaultKeyBinding.dict; \
+		fi
+
+.PHONY: setup-launch-agents-neovide
+setup-launch-agents-neovide:
+		@if [ ! -f /Library/LaunchAgents/Neovide.plist ]; then \
+				sudo mkdir -p /Library/LaunchAgents; \
+				sudo cp Library/LaunchAgents/Neovide.plist /Library/LaunchAgents/Neovide.plist; \
+		fi
+
 .PHONY: update-dotfiles-nvim
 update-dotfiles-nvim: install-nix
 		nix flake lock --update-input dotfiles-nvim
@@ -41,7 +55,7 @@ clean-nix-builtin-conf:
 		@if [ -f $(NIX_CONF_PATH) ] && [ ! -L $(NIX_CONF_PATH) ]; then sudo rm -rf $(NIX_CONF_PATH); fi
 
 .PHONY: build-nix-darwin
-build-nix-darwin: install-nix install-rosetta
+build-nix-darwin: install-nix install-rosetta setup-default-key-binding-dict setup-launch-agents-neovide
 		nix --experimental-features 'nix-command flakes' build '.?submodules=true#darwinConfigurations.darwin.system'
 
 .PHONY: build-nix-darwin-with-trace

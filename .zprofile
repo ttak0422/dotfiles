@@ -9,4 +9,7 @@ export PATH=$VOLTA_HOME/bin:$PATH
 
 if [[ -f /opt/homebrew/bin/brew ]]; then
   eval $(/opt/homebrew/bin/brew shellenv)
+  export PATH=${PATH#/opt/homebrew/bin:}
+  export PATH=${PATH#/opt/homebrew/sbin:}
+  export PATH=$PATH:/opt/homebrew/bin:/opt/homebrew/sbin
 fi
