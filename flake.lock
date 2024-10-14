@@ -2351,11 +2351,11 @@
         "winshift-nvim": "winshift-nvim"
       },
       "locked": {
-        "lastModified": 1728667499,
-        "narHash": "sha256-IWYJ2efqEa8zXjgHNxhwsWUlrRvpSZR+NfIjTcSCb00=",
+        "lastModified": 1728924020,
+        "narHash": "sha256-l+LmtCn3iGNNq5zSUujL/mBUMKpFt6xKRtnxDfQUcgU=",
         "owner": "ttak0422",
         "repo": "dotfiles-nvim",
-        "rev": "992f6726317bc4e90412e552b168e64fb61de598",
+        "rev": "80817c70fa28af5de1f3f177b1b4591ac80a345c",
         "type": "github"
       },
       "original": {
@@ -3635,11 +3635,11 @@
     "mkdnflow-nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1720625394,
-        "narHash": "sha256-GpD5CnmH9OfuHTMA0btAhFMyTCOThM+ZgxhSRZ541DE=",
+        "lastModified": 1724628977,
+        "narHash": "sha256-qBgp55xUEHS5umGeDFI3s6Z/Em9M7v0r4XzGBtC6gfw=",
         "owner": "jakewvincent",
         "repo": "mkdnflow.nvim",
-        "rev": "0fa1e682e35d46cd1a0102cedd05b0283e41d18d",
+        "rev": "d459bd7ce68910272038ed037c028180161fd14d",
         "type": "github"
       },
       "original": {
@@ -4202,11 +4202,11 @@
     "nfnl": {
       "flake": false,
       "locked": {
-        "lastModified": 1724151829,
-        "narHash": "sha256-Zga02vz/HTwaO1jxuiGu8piZ7v0w4CTuDc8+fpV/dJw=",
+        "lastModified": 1727376647,
+        "narHash": "sha256-3CTlbvdMeLnUv0wOfubGyx+DI6yF3Eju4scDa+h2UnE=",
         "owner": "Olical",
         "repo": "nfnl",
-        "rev": "e43ca4e93d28a43f7b3cb19121afff8abcedbc3f",
+        "rev": "60b2ab7051cf2f631bc03274b56061136d1f9177",
         "type": "github"
       },
       "original": {
