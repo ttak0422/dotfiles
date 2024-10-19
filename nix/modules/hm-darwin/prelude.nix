@@ -32,11 +32,11 @@
         find ${hmApps}/Applications -maxdepth 1 -type l 2>/dev/null | while IFS= read -r target_path
         do
           target_basename=$(basename $target_path)
-          $DRY_RUN_CMD ${mkalias} -L "$target_path" "$tmp_path/$target_basename"
+          run ${mkalias} -L "$target_path" "$tmp_path/$target_basename"
         done
 
-        $DRY_RUN_CMD rm -rf "$app_path"
-        $DRY_RUN_CMD mv "$tmp_path" "$app_path"
+        run rm -rf "$app_path"
+        run mv "$tmp_path" "$app_path"
       '';
   };
 }
