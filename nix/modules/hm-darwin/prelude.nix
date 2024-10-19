@@ -28,9 +28,9 @@
       lib.hm.dag.entryAfter [ "linkGeneration" ] ''
         applications="$HOME/Applications"
         if ! test -d "$applications"; then
-        mkdir -p "$applications"
-        chown ${username}: "$applications"
-        chmod u+w "$applications"
+          mkdir -p "$applications"
+          chown ${username}: "$applications"
+          chmod u+w "$applications"
         fi
 
         app_path="$HOME/Applications/HomeManagerApps"
