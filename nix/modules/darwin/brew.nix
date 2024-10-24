@@ -39,6 +39,8 @@ rec {
       "font-plemol-jp-nf"
       "google-chrome"
       "neovide"
+      "slack"
+      "discord"
     ];
     onActivation = {
       cleanup = "zap";
