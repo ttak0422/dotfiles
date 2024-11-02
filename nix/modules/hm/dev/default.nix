@@ -1,1 +1,6 @@
-{ imports = [ ./dhall.nix ]; }
+{
+  imports = [
+    ./dhall.nix
+    ./java.nix
+  ];
+}
