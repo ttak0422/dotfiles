@@ -41,6 +41,7 @@ rec {
       "neovide"
       "slack"
       "discord"
+      "onedrive"
     ];
     onActivation = {
       cleanup = "zap";
