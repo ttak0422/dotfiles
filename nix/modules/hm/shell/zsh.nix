@@ -1,4 +1,4 @@
-{ pkgs, lib, ... }:
+{ pkgs, ... }:
 let
   inherit (builtins) readFile;
 in
@@ -11,7 +11,6 @@ in
   ];
   programs.zsh = {
     enable = true;
-    autocd = true;
     enableCompletion = true;
     autosuggestion.enable = true;
     syntaxHighlighting.enable = true;
