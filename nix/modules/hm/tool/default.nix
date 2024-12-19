@@ -25,5 +25,6 @@
     tealdeer # ------- tldr: complete `man` command
     tokei # ---------- code count
     yq # ------------- YAML/XML/TOML processor
+    vhs # ------------ Tool for generating terminal GIFs with code
   ];
 }
