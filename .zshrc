@@ -24,6 +24,7 @@ alias gg="ghq get"
 alias cat="bat"
 alias ls="eza"
 alias tree="eza -T"
+alias "$"=""
 
 fpath+=("$HOME/.zsh/plugins/pure/share/zsh/site-functions")
 autoload -U promptinit; promptinit
