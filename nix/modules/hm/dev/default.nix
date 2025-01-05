@@ -5,5 +5,6 @@
     ./java.nix
     ./kotlin.nix
     ./lua.nix
+    ./rust.nix
   ];
 }

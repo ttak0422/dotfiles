@@ -16,7 +16,11 @@ in
     syntaxHighlighting.enable = true;
     zsh-abbr.enable = true;
     defaultKeymap = "emacs";
-    initExtra = readFile ../../../../.zshrc;
+    initExtra =
+      readFile ../../../../.zshrc
+      + ''
+        export PATH="$(rustup show active-toolchain | awk '{print $1}' | xargs -I{} echo ~/.rustup/toolchains/{}/bin):$PATH"
+      '';
     envExtra = readFile ../../../../.zshenv;
     profileExtra = readFile ../../../../.zprofile;
     plugins = [
