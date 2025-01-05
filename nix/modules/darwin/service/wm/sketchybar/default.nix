@@ -1,7 +1,7 @@
 { pkgs, ... }:
 {
   services.sketchybar = {
-    enable = true;
+    enable = false;
     package = pkgs.sketchybar;
     config = ''
       PLUGIN_DIR="${./plugins}"
