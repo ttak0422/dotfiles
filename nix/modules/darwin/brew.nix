@@ -42,6 +42,7 @@ rec {
       "slack"
       "discord"
       "onedrive"
+      "zen-browser"
     ];
     onActivation = {
       cleanup = "zap";
