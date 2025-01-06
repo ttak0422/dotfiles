@@ -1,6 +1,8 @@
 export GOPATH=$HOME/go
 export PATH=$GOPATH/bin:$PATH
 
+export PATH=$HOME/.cargo/bin:$PATH
+
 export NODE_PATH=~/.npm-packages/lib/node_modules
 export PATH=~/.npm-packages/bin:$PATH
 
