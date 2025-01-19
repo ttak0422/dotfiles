@@ -11,6 +11,8 @@
     editor = nvim
   [color]
     gi = auto
+  [status]
+    showUntrackedFiles = all
   [init]
     defaultBranch = main
   [alias]
