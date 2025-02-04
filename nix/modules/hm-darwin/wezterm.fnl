@@ -16,7 +16,8 @@
             {:key :6 :mods :CTRL :action (act.SendString "\027[54;5u")}
             {:key :7 :mods :CTRL :action (act.SendString "\027[55;5u")}
             {:key :8 :mods :CTRL :action (act.SendString "\027[56;5u")}
-            {:key :9 :mods :CTRL :action (act.SendString "\027[57;5u")}]
+            {:key :9 :mods :CTRL :action (act.SendString "\027[57;5u")}
+            {:key :s :mods :CTRL :action (act.SendString "\027[19;5u")}]
       window_padding {:left 5 :right 5 :top 5 :bottom 0}
       default_prog [:zsh :-l :-c "zellij attach --index 0 --create"]
       morimo {:foreground "#b5D2a9"
