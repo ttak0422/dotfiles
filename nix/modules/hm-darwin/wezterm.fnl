@@ -17,6 +17,7 @@
             {:key :7 :mods :CTRL :action (act.SendString "\027[55;5u")}
             {:key :8 :mods :CTRL :action (act.SendString "\027[56;5u")}
             {:key :9 :mods :CTRL :action (act.SendString "\027[57;5u")}
+            {:key :Enter :mods :CTRL :action (act.SendString "\027[13;5u")}
             ; TODO: check process
             ; {:key :s :mods :CTRL :action (act.SendString "\027[19;5u")}
             ]
