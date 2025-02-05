@@ -20,7 +20,7 @@
                     border_format   "#[fg=#6C7086]{char}"
                     border_position "top"
 
-                    hide_frame_for_single_pane "true"
+                    hide_frame_for_single_pane "false"
 
                     mode_tmux          "#[fg=#d3c785,bg=#2a2a2e,bold,italic] Zellij "
                     mode_normal        "#[fg=#767b82,bg=#2a2a2e,bold] Zellij "
