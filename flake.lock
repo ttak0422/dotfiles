@@ -2535,11 +2535,11 @@
         "winshift-nvim": "winshift-nvim"
       },
       "locked": {
-        "lastModified": 1738687538,
-        "narHash": "sha256-2pMFi1rM51CytjmllKecj0Z3uYIisFIrFaujuyEeiMI=",
+        "lastModified": 1738941216,
+        "narHash": "sha256-+rxgRf3gFyBL30NfHLbDEaNd643251YqhanGDhdtio4=",
         "owner": "ttak0422",
         "repo": "dotfiles-nvim",
-        "rev": "af6a696fe4b6ed99d26d555bed74b2aae5057748",
+        "rev": "9ea2507852e0dc535ec7e88c9fd8ac49c557e1a5",
         "type": "github"
       },
       "original": {
@@ -6070,11 +6070,11 @@
     "stickybuf-nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1723846947,
-        "narHash": "sha256-yVXfpUjYYbvuoKL2DhZa7CyOZirVkyn7z0jqytkj+WI=",
+        "lastModified": 1737788192,
+        "narHash": "sha256-9fLyyOJa/drpBVx9FrTO6pepRrAVZaHhYvLGTeopaIw=",
         "owner": "stevearc",
         "repo": "stickybuf.nvim",
-        "rev": "183b9569bef78f44b17c078214f7d731f19cbefe",
+        "rev": "61ec81b9de2a76bfcfaa579f16bf88395b58b814",
         "type": "github"
       },
       "original": {
