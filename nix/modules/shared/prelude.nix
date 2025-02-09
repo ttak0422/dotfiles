@@ -9,7 +9,6 @@ let
 in
 {
   nix = {
-    package = pkgs.nixFlakes;
     gc = {
       automatic = true;
       options = "--delete-older-than 10d";
@@ -18,7 +17,6 @@ in
       experimental-features = [
         "nix-command"
         "flakes"
-        "repl-flake"
       ];
       substituters = [ "https://nix-community.cachix.org" ];
       trusted-public-keys = [ "nix-community.cachix.org-1:mB9FSh9qf2dCimDSUo8Zy7bkq5CX+/rkCWyvRCYg3Fs=" ];
