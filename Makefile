@@ -72,3 +72,7 @@ apply-nix-darwin-with-trace: clean-nix-builtin-conf build-nix-darwin-with-trace
 
 .PHONY: apply-latest-nvim-darwin
 apply-latest-nvim-darwin: update-dotfiles-nvim apply-nix-darwin
+
+.PHONY: apply-nix-linux-laptop
+apply-nix-linux-laptop:
+	sudo nixos-rebuild switch --flake .#laptop

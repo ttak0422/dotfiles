@@ -49,6 +49,9 @@
       url = "github:homebrew/homebrew-bundle";
       flake = false;
     };
+    # NIX (LINUX)
+    nixos-hardware.url = "github:NixOS/nixos-hardware";
+    zen-browser.url = "github:0xc000022070/zen-browser-flake";
 
     # PACKAGES
     zjstatus = {
@@ -76,6 +79,9 @@
     inputs@{ flake-parts, ... }:
     flake-parts.lib.mkFlake { inherit inputs; } {
       systems = import inputs.systems;
-      imports = [ ./nix/hosts/darwin.nix ];
+      imports = [
+        ./nix/hosts/darwin.nix
+        ./nix/hosts/linux-laptop
+      ];
     };
 }
