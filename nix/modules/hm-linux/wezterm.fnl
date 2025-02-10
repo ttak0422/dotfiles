@@ -51,7 +51,7 @@
                                       "Noto Color Emoji"
                                       "Symbols Nerd Font Mono"])
    :allow_square_glyphs_to_overflow_width :WhenFollowedBySpace
-   :window_decorations :RESIZE
+   :window_decorations :NONE
    :enable_tab_bar false
    :adjust_window_size_when_changing_font_size false
    :audible_bell :Disabled
