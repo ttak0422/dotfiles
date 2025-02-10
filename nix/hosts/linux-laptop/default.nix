@@ -36,6 +36,7 @@
           ./../../modules/shared/prelude.nix
           ./../../modules/shared/nvim.nix
           ./../../modules/linux/service/skk.nix
+          ./../../modules/linux/service/power.nix
           {
             imports =
               [
@@ -44,7 +45,7 @@
               ++ (with inputs.nixos-hardware.nixosModules; [
                 common-cpu-intel
                 common-pc-laptop
-                common-pc-ssd
+                common-pc-laptop-ssd
               ]);
 
             # Bootloader.

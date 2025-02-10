@@ -51,10 +51,6 @@
     };
     # NIX (LINUX)
     nixos-hardware.url = "github:NixOS/nixos-hardware";
-    nbfc-linux = {
-      url = "github:nbfc-linux/nbfc-linux";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
     zen-browser.url = "github:0xc000022070/zen-browser-flake";
 
     # PACKAGES
