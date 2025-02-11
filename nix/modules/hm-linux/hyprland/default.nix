@@ -16,6 +16,7 @@
       env = [
         "HYPRCURSOR_THEME,rose-pine-hyprcursor"
       ];
+      monitor = [ "eDP-1, 1920x1280@59.98400, 0x0, 1" ];
       misc.disable_hyprland_logo = true;
     };
   };
