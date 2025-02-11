@@ -35,6 +35,8 @@
           inputs.home-manager.nixosModules.home-manager
           ./../../modules/shared/prelude.nix
           ./../../modules/shared/nvim.nix
+          ./../../modules/linux/prelude.nix
+          ./../../modules/linux/hyprland
           ./../../modules/linux/service/skk.nix
           ./../../modules/linux/service/xremap.nix
           ./../../modules/linux/service/power.nix
@@ -113,21 +115,6 @@
               };
             };
             services = {
-              xserver = {
-                # Enable the X11 windowing system.
-                enable = true;
-
-                # Enable the GNOME Desktop Environment.
-                displayManager.gdm.enable = true;
-                desktopManager.gnome.enable = true;
-
-                # Configure keymap in X11
-                xkb = {
-                  layout = "jp";
-                  variant = "";
-                };
-              };
-
               # Enable CUPS to print documents.
               printing.enable = true;
               pipewire = {
@@ -193,6 +180,7 @@
               useGlobalPkgs = true;
               users.${user} = {
                 imports = [
+                  ./../../modules/hm-linux/hyprland
                   ./../../modules/hm-linux/wezterm.nix
                   ./../../modules/hm/dev
                   ./../../modules/hm/git
