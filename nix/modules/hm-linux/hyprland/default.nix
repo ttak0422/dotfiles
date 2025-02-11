@@ -36,6 +36,16 @@
         "fcitx5 -D"
       ];
       monitor = [ "eDP-1, 1920x1280@59.98400, 0x0, 1" ];
+      general = {
+        gaps_in = 5;
+        gaps_out = 5;
+        border_size = 3;
+      };
+      animations = {
+        animation = [
+          "fade, 0"
+        ];
+      };
       misc.disable_hyprland_logo = true;
     };
   };
