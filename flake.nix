@@ -53,6 +53,7 @@
     nixos-hardware.url = "github:NixOS/nixos-hardware";
     zen-browser.url = "github:0xc000022070/zen-browser-flake";
     rose-pine-hyprcursor.url = "github:ndom91/rose-pine-hyprcursor";
+    hyprpanel.url = "github:Jas-SinghFSU/HyprPanel";
 
     # PACKAGES
     zjstatus = {

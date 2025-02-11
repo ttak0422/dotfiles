@@ -2,9 +2,9 @@
 {
   imports = [
     ./hyprlock.nix
+    ./hyprpanel.nix
     ./keymap.nix
     ./rofi.nix
-    ./waybar.nix
   ];
   home = {
     file = {

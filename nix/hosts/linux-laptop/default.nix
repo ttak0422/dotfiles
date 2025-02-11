@@ -180,6 +180,7 @@
               useGlobalPkgs = true;
               users.${user} = {
                 imports = [
+                  inputs.hyprpanel.homeManagerModules.hyprpanel
                   ./../../modules/hm-linux/hyprland
                   ./../../modules/hm-linux/wezterm.nix
                   ./../../modules/hm/dev

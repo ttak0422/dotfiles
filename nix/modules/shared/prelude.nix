@@ -27,6 +27,7 @@ in
   };
   nixpkgs = {
     overlays = [
+      inputs.hyprpanel.overlay
       (
         final: prev:
         let
