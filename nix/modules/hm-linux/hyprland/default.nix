@@ -2,6 +2,7 @@
 {
   imports = [
     ./keymap.nix
+    ./rofi.nix
   ];
   home.packages = [
     pkgs.hyprcursor

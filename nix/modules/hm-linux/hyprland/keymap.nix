@@ -5,6 +5,7 @@ _: {
     "$term" = "wezterm";
     bind = [
       "$mainMod, Return, exec, $term"
+      "$mainMod, SPACE, exec, rofi -show drun"
 
       "$subMod, h, movefocus, l"
       "$subMod, j, movefocus, d"
