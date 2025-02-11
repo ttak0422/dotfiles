@@ -4,4 +4,7 @@ _: {
     hyprland.enable = true;
     hyprlock.enable = true;
   };
+  services = {
+    upower.enable = true;
+  };
 }

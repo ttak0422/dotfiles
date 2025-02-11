@@ -20,7 +20,7 @@
             middle = [ "media" ];
             right = [
               "volume"
-              "systray"
+              "battery"
               "notifications"
             ];
           };
