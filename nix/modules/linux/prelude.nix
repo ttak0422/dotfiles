@@ -4,5 +4,6 @@ _: {
   security = {
     polkit.enable = true;
     pam.services.login.enableGnomeKeyring = true;
+    pam.services.hyprlock.enableGnomeKeyring = true;
   };
 }

@@ -1,8 +1,10 @@
 { inputs', pkgs, ... }:
 {
   imports = [
+    ./hyprlock.nix
     ./keymap.nix
     ./rofi.nix
+    ./waybar.nix
   ];
   home.packages = [
     pkgs.hyprcursor
@@ -17,6 +19,7 @@
         "HYPRCURSOR_THEME,rose-pine-hyprcursor"
       ];
       exec-once = [
+        "hyprlock"
         "fcitx5 -D"
       ];
       monitor = [ "eDP-1, 1920x1280@59.98400, 0x0, 1" ];

@@ -1,4 +1,7 @@
 _: {
-  programs.hyprland.enable = true;
-  services.xserver.displayManager.gdm.enable = true;
+  imports = [ ./greetd.nix ];
+  programs = {
+    hyprland.enable = true;
+    hyprlock.enable = true;
+  };
 }
