@@ -6,12 +6,12 @@ _: {
     bind = [
       "$mainMod, Return, exec, $term"
 
-      "$subMod, h, exec, movefocus l"
-      "$subMod, j, exec, movefocus d"
-      "$subMod, k, exec, movefocus u"
-      "$subMod, l, exec, movefocus r"
-      "$subMod, z, exec, fullscreen"
-      "$subMod, f, exec, togglefloating"
+      "$subMod, h, movefocus, l"
+      "$subMod, j, movefocus, d"
+      "$subMod, k, movefocus, u"
+      "$subMod, l, movefocus, r"
+      "$subMod, z, fullscreen"
+      "$subMod, f, togglefloating"
 
       "$mainMod, 1, workspace, 1"
       "$mainMod, 2, workspace, 2"
