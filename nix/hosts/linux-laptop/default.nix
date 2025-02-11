@@ -55,41 +55,33 @@
               loader.efi.canTouchEfiVariables = true;
             };
 
-            networking.hostName = "nixos"; # Define your hostname.
-            # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
+            networking = {
+              hostName = user;
+              networkmanager.enable = true;
+            };
 
-            # Configure network proxy if necessary
-            # networking.proxy.default = "http://user:password@proxy:port/";
-            # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
-
-            # Enable networking
-            networking.networkmanager.enable = true;
-
-            # Set your time zone.
             time.timeZone = "Asia/Tokyo";
 
-            i18n.inputMethod = {
-              enabled = "fcitx5";
-              # enable = true;
-              # type = "fcitx5";
-              # package = pkgs.fcitx5;
-              fcitx5.addons = with pkgs; [ fcitx5-skk ];
+            i18n = {
+              inputMethod = {
+                enable = true;
+                type = "fcitx5";
+                fcitx5.addons = with pkgs; [ fcitx5-skk ];
+              };
+              defaultLocale = "ja_JP.UTF-8";
+              extraLocaleSettings = {
+                LC_ADDRESS = "ja_JP.UTF-8";
+                LC_IDENTIFICATION = "ja_JP.UTF-8";
+                LC_MEASUREMENT = "ja_JP.UTF-8";
+                LC_MONETARY = "ja_JP.UTF-8";
+                LC_NAME = "ja_JP.UTF-8";
+                LC_NUMERIC = "ja_JP.UTF-8";
+                LC_PAPER = "ja_JP.UTF-8";
+                LC_TELEPHONE = "ja_JP.UTF-8";
+                LC_TIME = "ja_JP.UTF-8";
+              };
             };
 
-            # Select internationalisation properties.
-            i18n.defaultLocale = "ja_JP.UTF-8";
-
-            i18n.extraLocaleSettings = {
-              LC_ADDRESS = "ja_JP.UTF-8";
-              LC_IDENTIFICATION = "ja_JP.UTF-8";
-              LC_MEASUREMENT = "ja_JP.UTF-8";
-              LC_MONETARY = "ja_JP.UTF-8";
-              LC_NAME = "ja_JP.UTF-8";
-              LC_NUMERIC = "ja_JP.UTF-8";
-              LC_PAPER = "ja_JP.UTF-8";
-              LC_TELEPHONE = "ja_JP.UTF-8";
-              LC_TIME = "ja_JP.UTF-8";
-            };
             fonts = {
               packages = with pkgs; [
                 hackgen-font
@@ -120,43 +112,47 @@
                 };
               };
             };
-            # Enable the X11 windowing system.
-            services.xserver.enable = true;
+            services = {
+              xserver = {
+                # Enable the X11 windowing system.
+                enable = true;
 
-            # Enable the GNOME Desktop Environment.
-            services.xserver.displayManager.gdm.enable = true;
-            services.xserver.desktopManager.gnome.enable = true;
+                # Enable the GNOME Desktop Environment.
+                displayManager.gdm.enable = true;
+                desktopManager.gnome.enable = true;
 
-            # Configure keymap in X11
-            services.xserver.xkb = {
-              layout = "jp";
-              variant = "";
+                # Configure keymap in X11
+                xkb = {
+                  layout = "jp";
+                  variant = "";
+                };
+              };
+
+              # Enable CUPS to print documents.
+              printing.enable = true;
+              pipewire = {
+                enable = true;
+                alsa.enable = true;
+                alsa.support32Bit = true;
+                pulse.enable = true;
+                # If you want to use JACK applications, uncomment this
+                #jack.enable = true;
+              };
             };
-
-            # Enable CUPS to print documents.
-            services.printing.enable = true;
 
             # Enable sound with pipewire.
             hardware.pulseaudio.enable = false;
             security.rtkit.enable = true;
-            services.pipewire = {
-              enable = true;
-              alsa.enable = true;
-              alsa.support32Bit = true;
-              pulse.enable = true;
-              # If you want to use JACK applications, uncomment this
-              #jack.enable = true;
-            };
 
-            users.users.ttak0422 = {
+            users.users.${user} = {
               isNormalUser = true;
-              description = "ttak0422";
+              description = user;
               extraGroups = [
                 "networkmanager"
                 "wheel"
               ];
               shell = pkgs.zsh;
-              packages = with pkgs; [
+              packages = [
                 inputs'.zen-browser.packages.default
               ];
             };
@@ -210,7 +206,6 @@
               };
               extraSpecialArgs = specialArgs;
             };
-
           }
         ];
       };
