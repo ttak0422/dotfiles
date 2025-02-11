@@ -26,6 +26,7 @@
           };
         };
       };
+      # https://hyprpanel.com/configuration/settings.html
       settings = {
         bar.launcher.autoDetectIcon = true;
         bar.workspaces.show_icons = true;
@@ -40,10 +41,13 @@
           dashboard.directories.enabled = false;
           dashboard.stats.enable_gpu = true;
         };
-        theme.bar.transparent = true;
-        theme.font = {
-          name = "HackGen Console NF";
-          size = "16px";
+        theme = {
+          bar.transparent = true;
+          bar.location = "bottom";
+          font = {
+            name = "HackGen Console Regular";
+            size = "0.8rem";
+          };
         };
       };
     };
