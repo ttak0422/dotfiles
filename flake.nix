@@ -63,6 +63,7 @@
       url = "github:skk-dev/dict";
       flake = false;
     };
+    xremap.url = "github:xremap/nix-flake";
 
     # MY PACKAGES
     dotfiles-nvim.url = "github:ttak0422/dotfiles-nvim";

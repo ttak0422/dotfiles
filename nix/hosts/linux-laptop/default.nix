@@ -36,6 +36,7 @@
           ./../../modules/shared/prelude.nix
           ./../../modules/shared/nvim.nix
           ./../../modules/linux/service/skk.nix
+          ./../../modules/linux/service/xremap.nix
           ./../../modules/linux/service/power.nix
           {
             imports =
