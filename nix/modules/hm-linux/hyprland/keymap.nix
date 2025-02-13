@@ -11,11 +11,18 @@
     bind = [
       "$mainMod, Return, exec, $term"
       "$mainMod, SPACE, exec, rofi -show drun"
+      "$mainMod, l, exec, hyprlock"
 
       "$subMod, h, movefocus, l"
       "$subMod, j, movefocus, d"
       "$subMod, k, movefocus, u"
       "$subMod, l, movefocus, r"
+      "$subMod SHIFT, h, swapwindow, l"
+      "$subMod SHIFT, j, swapwindow, d"
+      "$subMod SHIFT, k, swapwindow, u"
+      "$subMod SHIFT, l, swapwindow, r"
+      "$subMod, Tab, cyclenext"
+      "$subMod SHIFT, Tab, cyclenext, prev"
       "$subMod, z, fullscreen"
       "$subMod, f, togglefloating"
       "$subMod, q, killactive"
