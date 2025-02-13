@@ -115,6 +115,7 @@
               };
             };
             services = {
+              desktopManager.plasma6.enable = true;
               # Enable CUPS to print documents.
               printing.enable = true;
               pipewire = {
@@ -127,7 +128,9 @@
               };
             };
 
-            # Enable sound with pipewire.
+            hardware.bluetooth.enable = true;
+            services.blueman.enable = true;
+
             hardware.pulseaudio.enable = false;
             security.rtkit.enable = true;
 
@@ -139,7 +142,7 @@
                 "wheel"
               ];
               shell = pkgs.zsh;
-              packages = [
+              packages = with pkgs; [
                 inputs'.zen-browser.packages.default
               ];
             };
@@ -178,6 +181,7 @@
             home-manager = {
               useUserPackages = true;
               useGlobalPkgs = true;
+              backupFileExtension = "bkp";
               users.${user} = {
                 imports = [
                   inputs.hyprpanel.homeManagerModules.hyprpanel
