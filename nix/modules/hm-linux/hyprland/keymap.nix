@@ -13,6 +13,7 @@ _: {
       "$subMod, l, movefocus, r"
       "$subMod, z, fullscreen"
       "$subMod, f, togglefloating"
+      "$subMod, q, killactive"
 
       "$mainMod, 1, workspace, 1"
       "$mainMod, 2, workspace, 2"
