@@ -43,6 +43,11 @@
       "$mainMod SHIFT, 0, movetoworkspace, 10"
     ];
 
+    bindm = [
+      "$subMod, mouse:272, movewindow"
+      "$subMod, mouse:273, resizewindow"
+    ];
+
     bindl = [
       ", XF86AudioMute, exec, pamixer -t"
     ];
