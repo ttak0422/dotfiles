@@ -1,4 +1,9 @@
-_: {
+{ pkgs, ... }:
+{
+  home.packages = with pkgs; [
+    brightnessctl
+    pamixer
+  ];
   wayland.windowManager.hyprland.settings = {
     "$mainMod" = "SUPER";
     "$subMod" = "ALT";
@@ -36,6 +41,17 @@ _: {
       "$mainMod SHIFT, 8, movetoworkspace, 8"
       "$mainMod SHIFT, 9, movetoworkspace, 9"
       "$mainMod SHIFT, 0, movetoworkspace, 10"
+    ];
+
+    bindl = [
+      ", XF86AudioMute, exec, pamixer -t"
+    ];
+
+    bindel = [
+      ", XF86AudioRaiseVolume, exec, pamixer -i 10"
+      ", XF86AudioLowerVolume, exec, pamixer -d 10"
+      ", XF86MonBrightnessUp, exec, brightnessctl set +10%"
+      ", XF86MonBrightnessDown, exec, brightnessctl set 10%-"
     ];
   };
 }
