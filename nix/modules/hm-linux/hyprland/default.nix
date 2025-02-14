@@ -1,6 +1,7 @@
 { inputs', pkgs, ... }:
 {
   imports = [
+    ./hypridle.nix
     ./hyprlock.nix
     ./hyprpanel.nix
     ./keymap.nix
