@@ -49,8 +49,8 @@
       "$mainMod SHIFT, 9, movetoworkspace, 9"
       "$mainMod SHIFT, 0, movetoworkspace, 10"
 
-      "$mainMod, up, hyprexpo:expo, toggle"
-      "$mainMod, down, hyprexpo:expo, toggle"
+      "CTRL, up, overview:toggle"
+      "CTRL, down, overview:toggle"
     ];
 
     binde = [

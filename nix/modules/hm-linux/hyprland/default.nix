@@ -29,7 +29,7 @@
     enable = true;
     plugins = with pkgs.hyprlandPlugins; [
       hyprfocus
-      hyprexpo
+      hyprspace
     ];
     settings = {
       input.kb_layout = "jp";
@@ -57,10 +57,6 @@
         hyprfocus = {
           enabled = "yes";
           focus_animation = "flash";
-        };
-        hyprexpo = {
-          columns = 3;
-          gap_size = 5;
         };
       };
     };
