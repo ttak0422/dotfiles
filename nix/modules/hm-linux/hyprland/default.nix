@@ -27,7 +27,10 @@
   };
   wayland.windowManager.hyprland = {
     enable = true;
-    plugins = with pkgs.hyprlandPlugins; [ hyprfocus ];
+    plugins = with pkgs.hyprlandPlugins; [
+      hyprfocus
+      hyprexpo
+    ];
     settings = {
       input.kb_layout = "jp";
       env = [
@@ -50,9 +53,15 @@
         ];
       };
       misc.disable_hyprland_logo = true;
-      "plugin:hyprfocus" = {
-        enabled = "yes";
-        focus_animation = "flash";
+      plugin = {
+        hyprfocus = {
+          enabled = "yes";
+          focus_animation = "flash";
+        };
+        hyprexpo = {
+          columns = 3;
+          gap_size = 5;
+        };
       };
     };
   };
