@@ -52,6 +52,10 @@
             stats.enable_gpu = true;
             shortcuts.enabled = false;
           };
+          power = {
+            lowBatteryNotification = true;
+            lowBatteryThreshold = 15;
+          };
         };
         theme = {
           matugen = true;
