@@ -50,7 +50,7 @@
           };
           dashboard = {
             directories.enabled = false;
-            stats.enable_gpu = true;
+            stats.enable_gpu = false;
             shortcuts.enabled = false;
           };
           power = {
