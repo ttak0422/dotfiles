@@ -19,7 +19,6 @@
     };
     packages = with pkgs; [
       hyprcursor
-      swww
       matugen
       # swww
       inputs'.rose-pine-hyprcursor.packages.default
