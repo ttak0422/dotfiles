@@ -21,6 +21,7 @@
               "network"
               "bluetooth"
               "clock"
+              "hyprsunset"
               "notifications"
             ];
           };
