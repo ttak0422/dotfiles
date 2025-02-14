@@ -50,6 +50,13 @@
       "$mainMod SHIFT, 0, movetoworkspace, 10"
     ];
 
+    binde = [
+      "$subMod, a, resizeactive, -20 0"
+      "$subMod, s, resizeactive, 0 20"
+      "$subMod, w, resizeactive, 0 -20"
+      "$subMod, d, resizeactive, 20 0"
+    ];
+
     bindm = [
       "$subMod, mouse:272, movewindow"
       "$subMod, mouse:273, resizewindow"
