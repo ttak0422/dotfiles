@@ -54,12 +54,18 @@
           };
         };
         theme = {
+          matugen = true;
+          matugen_settings.mode = "light";
           bar.transparent = false;
           bar.location = "bottom";
           font = {
             name = "HackGen Console Regular";
             size = "0.7rem";
           };
+        };
+        wallpaper = {
+          enable = true;
+          image = "~/.config/hypr/wallpaper/panasonic.jpg";
         };
       };
     };

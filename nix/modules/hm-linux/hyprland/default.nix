@@ -20,6 +20,8 @@
     packages = with pkgs; [
       hyprcursor
       swww
+      matugen
+      # swww
       inputs'.rose-pine-hyprcursor.packages.default
     ];
   };
@@ -33,7 +35,7 @@
       ];
       exec-once = [
         "hyprlock"
-        "swww init && swww img ~/.config/hypr/wallpaper/panasonic.jpg"
+        # "swww init && swww img ~/.config/hypr/wallpaper/panasonic.jpg"
         "fcitx5 -D"
       ];
       monitor = [ "eDP-1, 1920x1280@59.98400, 0x0, 1" ];
