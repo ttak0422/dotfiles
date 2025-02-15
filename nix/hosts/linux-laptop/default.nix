@@ -33,13 +33,14 @@
         inherit system specialArgs;
         modules = [
           inputs.home-manager.nixosModules.home-manager
-          ./../../modules/shared/prelude.nix
-          ./../../modules/shared/nvim.nix
-          ./../../modules/linux/prelude.nix
           ./../../modules/linux/hyprland
+          ./../../modules/linux/prelude.nix
+          ./../../modules/linux/service/onedrive.nix
+          ./../../modules/linux/service/power.nix
           ./../../modules/linux/service/skk.nix
           ./../../modules/linux/service/xremap.nix
-          ./../../modules/linux/service/power.nix
+          ./../../modules/shared/nvim.nix
+          ./../../modules/shared/prelude.nix
           {
             imports =
               [
