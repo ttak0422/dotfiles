@@ -49,6 +49,8 @@
       };
       animations = {
         animation = [
+          "workspaces, 0"
+          "windows, 0"
           "fade, 0"
         ];
       };
