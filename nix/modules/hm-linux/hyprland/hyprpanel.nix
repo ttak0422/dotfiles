@@ -57,6 +57,7 @@
             directories.enabled = false;
             stats.enable_gpu = false;
             shortcuts.enabled = false;
+            powermenu.avatar.image = "~/.config/hypr/avatar.jpg";
           };
           power = {
             lowBatteryNotification = true;

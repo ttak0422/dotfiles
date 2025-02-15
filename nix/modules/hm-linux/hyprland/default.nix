@@ -9,6 +9,13 @@
   ];
   home = {
     file = {
+      "avatar.jpg" = {
+        target = ".config/hypr/avatar.jpg";
+        source = pkgs.fetchurl {
+          url = "https://avatars.githubusercontent.com/u/15827817?v=4";
+          sha256 = "sha256-wfUhbO+n/8xMCI3PfZFAbJ61MJ86kinovGXbmExQWMY=";
+        };
+      };
       "panasonic.jpg" = {
         target = ".config/hypr/wallpaper/panasonic.jpg";
         source = pkgs.fetchurl {
