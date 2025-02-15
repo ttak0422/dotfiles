@@ -35,6 +35,9 @@
       input.kb_layout = "jp";
       env = [
         "HYPRCURSOR_THEME,rose-pine-hyprcursor"
+        "GTK_IM_MODULE, fcitx"
+        "QT_IM_MODULE, fcitx"
+        "XMODIFIERS, @im=fcitx"
       ];
       exec-once = [
         "hyprlock"
