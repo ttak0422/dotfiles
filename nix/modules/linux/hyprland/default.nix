@@ -12,6 +12,7 @@
     libgtop
     dart-sass
     wl-clipboard
+    cliphist
   ];
   services = {
     upower.enable = true;

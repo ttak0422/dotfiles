@@ -12,6 +12,7 @@
       "$mainMod, Return, exec, $term"
       "$mainMod, SPACE, exec, rofi -show drun"
       "$mainMod, l, exec, hyprlock"
+      "$mainMod, V, exec, cliphist list | rofi -dmenu | cliphist decode | wl-copy"
 
       "$subMod, h, movefocus, l"
       "$subMod, j, movefocus, d"

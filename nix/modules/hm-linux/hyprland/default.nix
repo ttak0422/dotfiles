@@ -40,6 +40,7 @@
         "hyprlock"
         # "swww init && swww img ~/.config/hypr/wallpaper/panasonic.jpg"
         "fcitx5 -D"
+        "wl-paste --type text --watch cliphist store"
       ];
       monitor = [ "eDP-1, 1920x1280@59.98400, 0x0, 1" ];
       general = {
