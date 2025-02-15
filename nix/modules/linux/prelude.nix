@@ -1,9 +1,5 @@
-_: {
-  services.gnome.gnome-keyring.enable = true;
-  programs.seahorse.enable = true;
-  security = {
-    polkit.enable = true;
-    pam.services.login.enableGnomeKeyring = true;
-    pam.services.hyprlock.enableGnomeKeyring = true;
-  };
+{
+  imports = [
+    ./security.nix
+  ];
 }

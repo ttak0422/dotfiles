@@ -142,9 +142,7 @@
                 "wheel"
               ];
               shell = pkgs.zsh;
-              packages = with pkgs; [
-                inputs'.zen-browser.packages.default
-              ];
+              packages = [ ];
             };
             programs.zsh.enable = true;
 
@@ -185,6 +183,7 @@
               users.${user} = {
                 imports = [
                   inputs.hyprpanel.homeManagerModules.hyprpanel
+                  ./../../modules/hm-linux/apps.nix
                   ./../../modules/hm-linux/hyprland
                   ./../../modules/hm-linux/wezterm.nix
                   ./../../modules/hm/dev
