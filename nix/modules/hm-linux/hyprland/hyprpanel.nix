@@ -16,6 +16,7 @@
             ];
             middle = [ "windowtitle" ];
             right = [
+              "media"
               "battery"
               "volume"
               "network"
@@ -37,6 +38,10 @@
             format = "%m/%d  %H:%M";
             # icon = "";
             showIcon = true;
+          };
+          media = {
+            format = "{artist: - }{title}";
+            show_active_only = true;
           };
         };
 
