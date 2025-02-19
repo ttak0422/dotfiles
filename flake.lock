@@ -2650,11 +2650,11 @@
         "winshift-nvim": "winshift-nvim"
       },
       "locked": {
-        "lastModified": 1739624829,
-        "narHash": "sha256-e8RQtVOA5RWT88tD6qrIwFG271Nkf31OmS+0xoMi+7U=",
+        "lastModified": 1739805916,
+        "narHash": "sha256-QaPx4brFHleCtOfveIt7f92x4XNksYmiIwd8dVRN3+0=",
         "owner": "ttak0422",
         "repo": "dotfiles-nvim",
-        "rev": "7d9f9788a7c6ade3bb72dde58f84734843c2d268",
+        "rev": "814d8b229842f059831f5cffb225ebfb17887483",
         "type": "github"
       },
       "original": {
@@ -6769,11 +6769,11 @@
     "stickybuf-nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1737788192,
-        "narHash": "sha256-9fLyyOJa/drpBVx9FrTO6pepRrAVZaHhYvLGTeopaIw=",
+        "lastModified": 1739324702,
+        "narHash": "sha256-uPbxfEQabt+AmqujTd/Zuu7Y/bx/XcFjSuCt2CslKNQ=",
         "owner": "stevearc",
         "repo": "stickybuf.nvim",
-        "rev": "61ec81b9de2a76bfcfaa579f16bf88395b58b814",
+        "rev": "bf7221321e9b762d4deaef3aaaaa7ae5f3a7f902",
         "type": "github"
       },
       "original": {
@@ -7550,16 +7550,15 @@
     "vim-sonictemplate": {
       "flake": false,
       "locked": {
-        "lastModified": 1711250165,
-        "narHash": "sha256-wSbGkW3BmMjhEmfDwibLxUHTmirV4JY76zpIpBjmVQM=",
-        "owner": "ttak0422",
+        "lastModified": 1739715370,
+        "narHash": "sha256-t9U/itV+o2NsUEI0s3nvXy1KtV/bYBnQJeS+7g0ZAjY=",
+        "owner": "mattn",
         "repo": "vim-sonictemplate",
-        "rev": "7a13f4b65cfffc293b4fbed7e6264b15b56f9160",
+        "rev": "822a784af2f9df60d5bf5c0d00b816faa40cedeb",
         "type": "github"
       },
       "original": {
-        "owner": "ttak0422",
-        "ref": "feature/support-java-test-directory",
+        "owner": "mattn",
         "repo": "vim-sonictemplate",
         "type": "github"
       }
