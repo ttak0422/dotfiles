@@ -19,6 +19,7 @@ in
       git-lfs
       git-secrets
       pre-commit
+      gitu
     ];
     file = {
       "${configDir}/config".text = ''
