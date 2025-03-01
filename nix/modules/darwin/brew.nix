@@ -33,15 +33,17 @@ rec {
     brews = [ "lunchy" ];
     casks = [
       "aquaskk"
+      "discord"
       "firefox"
       "font-plemol-jp"
       "font-plemol-jp-hs"
       "font-plemol-jp-nf"
       "google-chrome"
+      "karabiner-elements"
       "neovide"
-      "slack"
-      "discord"
       "onedrive"
+      "slack"
+      "wezterm"
       "zen-browser"
     ];
     onActivation = {
