@@ -39,7 +39,11 @@
       hyprspace
     ];
     settings = {
-      input.kb_layout = "jp";
+      input = {
+        kb_layout = "jp";
+        repeat_delay = 225;
+        repeat_rate = 30;
+      };
       env = [
         "HYPRCURSOR_THEME,rose-pine-hyprcursor"
         "GTK_IM_MODULE, fcitx"
