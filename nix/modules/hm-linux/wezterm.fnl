@@ -58,6 +58,7 @@
    :default_cursor_style :SteadyBlock
    :force_reverse_video_cursor true
    :hide_mouse_cursor_when_typing false
+   :use_ime false
    : keys
    : window_padding
    : default_prog})
