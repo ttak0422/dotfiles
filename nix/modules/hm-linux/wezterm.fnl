@@ -46,7 +46,7 @@
                         "#a0c8cc"
                         "#b5d2a9"]}]
   {:colors morimo
-   :font (wezterm.font_with_fallback ["HackGen Console"
+   :font (wezterm.font_with_fallback ["PlemolJP Console NF"
                                       "JetBrains Mono"
                                       "Noto Color Emoji"
                                       "Symbols Nerd Font Mono"])

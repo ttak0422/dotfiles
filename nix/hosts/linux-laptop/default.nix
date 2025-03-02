@@ -95,6 +95,8 @@
                 noto-fonts-color-emoji
                 noto-fonts-emoji-blob-bin
                 noto-fonts-monochrome-emoji
+                plemoljp
+                plemoljp-nf
               ];
               fontDir.enable = true;
               fontconfig = {
