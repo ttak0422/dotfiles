@@ -48,7 +48,7 @@ setup-launch-agents-neovide:
 
 .PHONY: update-dotfiles-nvim
 update-dotfiles-nvim: install-nix
-		nix flake lock --update-input dotfiles-nvim
+		nix flake update dotfiles-nvim
 
 .PHONY: clean-nix-builtin-conf
 clean-nix-builtin-conf:
@@ -76,3 +76,6 @@ apply-latest-nvim-darwin: update-dotfiles-nvim apply-nix-darwin
 .PHONY: apply-nix-linux-laptop
 apply-nix-linux-laptop:
 	sudo nixos-rebuild switch --flake .#laptop
+
+.PHONY: apply-latest-nvim-linux-laptop
+apply-latest-nvim-linux-laptop: update-dotfiles-nvim apply-nix-linux-laptop
