@@ -2,6 +2,7 @@
 {
   home.packages = with pkgs; [
     brightnessctl
+    grimblast
     pamixer
   ];
   wayland.windowManager.hyprland.settings = {
@@ -52,6 +53,9 @@
 
       "CTRL, up, overview:toggle"
       "CTRL, down, overview:toggle"
+
+      ''$mainMod SHIFT, 3, exec, grimblast --notify copysave output "$HOME/Screenshots/$(date +%Y-%m-%dT%H:%M:%S).png"''
+      ''$mainMod SHIFT, 4, exec, grimblast --notify copysave area "$HOME/Screenshots/$(date +%Y-%m-%dT%H:%M:%S).png"''
     ];
 
     binde = [
