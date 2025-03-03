@@ -36,7 +36,7 @@ keybinds clear-defaults=true {
         bind "Enter" { SwitchToMode "Search"; }
     }
     search {
-        bind "Ctrl s" { SwitchToMode "Normal"; }
+        bind "Ctrl g" { SwitchToMode "Normal"; }
         bind "Ctrl c" { ScrollToBottom; SwitchToMode "Normal"; }
         bind "j" "Down" { ScrollDown; }
         bind "k" "Up" { ScrollUp; }
@@ -59,7 +59,7 @@ keybinds clear-defaults=true {
         bind "Esc" { UndoRenamePane; SwitchToMode "Pane"; }
     }
     tmux {
-        bind "Ctrl s" { Write 2; SwitchToMode "Normal"; }
+        bind "Ctrl g" { Write 2; SwitchToMode "Normal"; }
         bind "[" { SwitchToMode "Scroll"; }
         bind "/" { SwitchToMode "EnterSearch"; SearchInput 0; }
         bind "-" { NewPane "Down"; SwitchToMode "Normal"; }
@@ -100,7 +100,7 @@ keybinds clear-defaults=true {
         bind "Enter" "Esc" { SwitchToMode "Normal"; }
     }
     shared_except "tmux" {
-        bind "Ctrl s" { SwitchToMode "Tmux"; }
+        bind "Ctrl g" { SwitchToMode "Tmux"; }
     }
 }
 
