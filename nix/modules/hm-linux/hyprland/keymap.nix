@@ -54,8 +54,8 @@
       "CTRL, up, overview:toggle"
       "CTRL, down, overview:toggle"
 
-      ''$mainMod SHIFT, 3, exec, grimblast --notify copysave output "$HOME/Screenshots/$(date +%Y-%m-%dT%H:%M:%S).png"''
-      ''$mainMod SHIFT, 4, exec, grimblast --notify copysave area "$HOME/Screenshots/$(date +%Y-%m-%dT%H:%M:%S).png"''
+      ''$mainMod, Print, exec, grimblast --notify copysave output "$HOME/Screenshots/$(date +%Y-%m-%dT%H:%M:%S).png"''
+      ''$mainMod SHIFT, s, exec, grimblast --notify copysave area "$HOME/Screenshots/$(date +%Y-%m-%dT%H:%M:%S).png"''
     ];
 
     binde = [
