@@ -2655,11 +2655,11 @@
         "winshift-nvim": "winshift-nvim"
       },
       "locked": {
-        "lastModified": 1741403644,
-        "narHash": "sha256-g+QVGKBtmwsUrjnZHYGk1Ix19hVN+l7bMCo5+lo/nOI=",
+        "lastModified": 1741444946,
+        "narHash": "sha256-iNdNhPie9Q4Vog1triL5wtavdtHOx7VVHimWYgGEF/4=",
         "owner": "ttak0422",
         "repo": "dotfiles-nvim",
-        "rev": "b21a21b785508783f90ca0c56da742ed75c8f4a9",
+        "rev": "cbbacc77cbe3dd6006b82d0e7941b4f1be9b5035",
         "type": "github"
       },
       "original": {
@@ -4545,15 +4545,16 @@
     "morimo": {
       "flake": false,
       "locked": {
-        "lastModified": 1736660913,
-        "narHash": "sha256-10YpEAtZ4jXndYtGTTRDhvx49+ha2vKDmp+pGOzsYu4=",
+        "lastModified": 1741416420,
+        "narHash": "sha256-gYl1xvxZCnca8yb+uLnY1XFWsDp8n7XgCgLYKdDCfT8=",
         "owner": "ttak0422",
         "repo": "morimo",
-        "rev": "f1aeb4c651b2a0f68be86cc5351b965e72c514d7",
+        "rev": "79eb6c6f4a6f56e3b50f8beb64b108240d3ed1e1",
         "type": "github"
       },
       "original": {
         "owner": "ttak0422",
+        "ref": "v2",
         "repo": "morimo",
         "type": "github"
       }
