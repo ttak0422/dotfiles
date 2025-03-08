@@ -2,8 +2,10 @@
 {
   home.packages = with pkgs; [
     inputs'.zen-browser.packages.default
-    vscode
+    discord
+    slack
     spotify
+    vscode
   ];
   programs.google-chrome.enable = true;
 }
