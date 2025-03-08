@@ -186,6 +186,7 @@
               users.${user} = {
                 imports = [
                   inputs.hyprpanel.homeManagerModules.hyprpanel
+                  ./../../modules/hm-linux
                   ./../../modules/hm-linux/apps.nix
                   ./../../modules/hm-linux/hyprland
                   ./../../modules/hm-linux/wezterm.nix
@@ -196,6 +197,7 @@
                 ];
                 home = {
                   username = user;
+                  homeDirectory = "/home/${user}";
                   stateVersion = "24.11";
                 };
               };
