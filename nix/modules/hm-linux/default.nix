@@ -11,5 +11,9 @@
       unzip
       xdg-utils
     ];
+    file.".config/libskk/rules/custom" = {
+      source = ./libskk;
+      recursive = true;
+    };
   };
 }
