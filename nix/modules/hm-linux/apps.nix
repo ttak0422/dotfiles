@@ -1,8 +1,9 @@
 { inputs', pkgs, ... }:
 {
   home.packages = with pkgs; [
-    inputs'.zen-browser.packages.default
     discord
+    inputs'.zen-browser.packages.default
+    neovide
     slack
     spotify
     vscode
