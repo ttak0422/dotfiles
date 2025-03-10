@@ -16,9 +16,7 @@
       "C-f": "expand-preedit",
       "C-b": "shrink-preedit",
       "Right": "expand-preedit",
-      "Left": "shrink-preedit",
-      "Henkan": "set-input-mode-hiragana",
-      "Muhenkan": "set-input-mode-latin"
+      "Left": "shrink-preedit"
     }
   }
 }
