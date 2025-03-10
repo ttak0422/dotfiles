@@ -2,6 +2,7 @@
 {
   home.packages = with pkgs; [
     discord
+    ghostty
     inputs'.zen-browser.packages.default
     neovide
     slack
