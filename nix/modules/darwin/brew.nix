@@ -43,6 +43,7 @@ rec {
       "neovide"
       "onedrive"
       "slack"
+      "visual-studio-code"
       "wezterm"
       "zen-browser"
     ];
