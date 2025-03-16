@@ -2671,11 +2671,11 @@
         "winshift-nvim": "winshift-nvim"
       },
       "locked": {
-        "lastModified": 1742050459,
-        "narHash": "sha256-hVf4Lj1koLuoL9cc8OYL+cIDxwVMy9tO0jhZuxsr++Q=",
+        "lastModified": 1742104443,
+        "narHash": "sha256-WFLpiIAW5DiW731m1LP5hXLJ82drMjdRFbf2xPO5HfQ=",
         "owner": "ttak0422",
         "repo": "dotfiles-nvim",
-        "rev": "a0367ee11e7ca5e29833c822429d4be9e5bd0d62",
+        "rev": "d08f1575a6a6df7862132fe7ab4b0b98ab66cf5c",
         "type": "github"
       },
       "original": {
