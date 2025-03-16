@@ -34,6 +34,7 @@
         modules = [
           inputs.home-manager.nixosModules.home-manager
           ./../../modules/linux/hyprland
+          ./../../modules/linux/virtualization
           ./../../modules/linux/prelude.nix
           ./../../modules/linux/service/onedrive.nix
           ./../../modules/linux/service/power.nix
@@ -143,6 +144,7 @@
               extraGroups = [
                 "networkmanager"
                 "wheel"
+                "docker"
               ];
               shell = pkgs.zsh;
               packages = [ ];
