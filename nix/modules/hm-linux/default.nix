@@ -1,6 +1,6 @@
 { pkgs, ... }:
 {
-  imports = [ ];
+  imports = [ ./ghostty ];
   xdg = {
     enable = true;
     userDirs.enable = true;
