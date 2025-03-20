@@ -13,6 +13,7 @@
     dart-sass
     wl-clipboard
     cliphist
+    networkmanagerapplet
   ];
   services = {
     upower.enable = true;
