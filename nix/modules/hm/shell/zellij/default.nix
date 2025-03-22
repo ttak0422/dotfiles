@@ -11,7 +11,7 @@
                 plugin location="file:${pkgs.zjstatus}/bin/zjstatus.wasm" {
                     format_left   "{tabs}"
                     format_center ""
-                    format_right  "{mode}"
+                    format_right  "{mode}#[fg=#767b82,bg=#2a2a2e,bold]({session})"
                     format_space  "[fg=#b5d2a9,bg=#2a2a2e]"
                     first_start "true"
 
