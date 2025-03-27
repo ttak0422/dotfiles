@@ -2639,6 +2639,7 @@
         "todo-comments-nvim": "todo-comments-nvim",
         "toggler": "toggler",
         "toggleterm-nvim": "toggleterm-nvim",
+        "trace-pr-nvim": "trace-pr-nvim",
         "translate-nvim": "translate-nvim",
         "tree-sitter-norg-meta": "tree-sitter-norg-meta",
         "trim-nvim": "trim-nvim",
@@ -2670,11 +2671,11 @@
         "winshift-nvim": "winshift-nvim"
       },
       "locked": {
-        "lastModified": 1742624488,
-        "narHash": "sha256-jmXxrdob4GOsdavv6OsD4kPdIgaQUN8P5jfBBKdBIWk=",
+        "lastModified": 1743007068,
+        "narHash": "sha256-HGSVGqkQKU1rWoueKCidh0jPDikyLnEFLNarGyS67R8=",
         "owner": "ttak0422",
         "repo": "dotfiles-nvim",
-        "rev": "3c67192be1153f15d3d24a97831b94cbae74726a",
+        "rev": "048da170400836e4679d07572df065d7d4b39b92",
         "type": "github"
       },
       "original": {
@@ -4544,11 +4545,11 @@
     "morimo": {
       "flake": false,
       "locked": {
-        "lastModified": 1741416420,
-        "narHash": "sha256-gYl1xvxZCnca8yb+uLnY1XFWsDp8n7XgCgLYKdDCfT8=",
+        "lastModified": 1742893298,
+        "narHash": "sha256-5RiJxWAhSA6YShOfkzNF2Dmoj7NwCg+E1c4V4BGbml4=",
         "owner": "ttak0422",
         "repo": "morimo",
-        "rev": "79eb6c6f4a6f56e3b50f8beb64b108240d3ed1e1",
+        "rev": "9dda5e2003b9a6181f09189a8d2e4fc7e2bc29f4",
         "type": "github"
       },
       "original": {
@@ -4625,11 +4626,11 @@
     "neorg": {
       "flake": false,
       "locked": {
-        "lastModified": 1733872345,
-        "narHash": "sha256-6pUwWfsJ0TmToGU7Bvaeobnj2vuIqwd4w3TDdTvQZSk=",
+        "lastModified": 1742740879,
+        "narHash": "sha256-RmqjkHR8A8c31BlrvHwMjfdZqbp0rPQIUc2ajhNyjkI=",
         "owner": "nvim-neorg",
         "repo": "neorg",
-        "rev": "62671a7b03a1f38a6e5e03b006a9b6f8d804be0e",
+        "rev": "91fe8bdb40fa296ff4949fcc53224bd7cb8970a5",
         "type": "github"
       },
       "original": {
@@ -7370,6 +7371,22 @@
       "original": {
         "owner": "akinsho",
         "repo": "toggleterm.nvim",
+        "type": "github"
+      }
+    },
+    "trace-pr-nvim": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1742631707,
+        "narHash": "sha256-m3Atf7PRUrv1KBCZhK5CbYXfwLEjcGOJV9CSSXBJFxw=",
+        "owner": "h3pei",
+        "repo": "trace-pr.nvim",
+        "rev": "b85b09723d5508fea15433b8aebba3ab1aaa93d9",
+        "type": "github"
+      },
+      "original": {
+        "owner": "h3pei",
+        "repo": "trace-pr.nvim",
         "type": "github"
       }
     },
