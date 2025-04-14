@@ -4,6 +4,7 @@
     discord
     ghostty
     inputs'.zen-browser.packages.default
+    jetbrains-toolbox
     neovide
     slack
     spotify
