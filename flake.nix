@@ -21,10 +21,10 @@
       url = "github:LnL7/nix-darwin/master";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    mkAlias = {
-      url = "github:reckenrode/mkAlias";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    # mkAlias = {
+    #   url = "github:reckenrode/mkAlias";
+    #   inputs.nixpkgs.follows = "nixpkgs";
+    # };
     nix-homebrew = {
       url = "github:zhaofengli-wip/nix-homebrew";
       inputs = {
