@@ -39,6 +39,7 @@ rec {
       "font-plemol-jp-hs"
       "font-plemol-jp-nf"
       "google-chrome"
+      "jetbrains-toolbox"
       "karabiner-elements"
       "neovide"
       "onedrive"
