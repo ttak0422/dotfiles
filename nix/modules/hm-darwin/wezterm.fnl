@@ -56,6 +56,7 @@
    :allow_square_glyphs_to_overflow_width :WhenFollowedBySpace
    :window_decorations :RESIZE
    :enable_tab_bar false
+   :enable_kitty_keyboard true
    :adjust_window_size_when_changing_font_size false
    :audible_bell :Disabled
    :default_cursor_style :SteadyBlock
