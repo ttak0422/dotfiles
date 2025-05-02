@@ -2671,11 +2671,11 @@
         "winshift-nvim": "winshift-nvim"
       },
       "locked": {
-        "lastModified": 1745986649,
-        "narHash": "sha256-nKDdXQLF5VXqZav8Xy9StBucA8SDuh7Ty+f8MM1PkNs=",
+        "lastModified": 1745993585,
+        "narHash": "sha256-T9soGCAtvTc4/suV4qcqjXEaHe1nv71ZPPuoY/MuUts=",
         "owner": "ttak0422",
         "repo": "dotfiles-nvim",
-        "rev": "8fbf170abd5add6a13678903cff13aea47715487",
+        "rev": "73086a2f880bcc8d29a07bac64bbbfc52c72e892",
         "type": "github"
       },
       "original": {
@@ -6727,11 +6727,11 @@
     "skkeleton": {
       "flake": false,
       "locked": {
-        "lastModified": 1736064963,
-        "narHash": "sha256-V86J+8rg1/5ZUL9t0k2S5H+z7KZ1DZwLwmb5yM0+vts=",
+        "lastModified": 1745739517,
+        "narHash": "sha256-u5fWC8a4HBGgWinGH5KCmusRJSalrVv7ke4YUkBj+zs=",
         "owner": "vim-skk",
         "repo": "skkeleton",
-        "rev": "8bb1b8782227291c8cbe2aa62a9af732557690cc",
+        "rev": "dcd538c1cb63026543665d762feb4740d591ddf5",
         "type": "github"
       },
       "original": {
