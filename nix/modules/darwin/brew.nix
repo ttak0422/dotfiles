@@ -32,7 +32,6 @@ rec {
     taps = builtins.attrNames nix-homebrew.taps;
     brews = [ "lunchy" ];
     casks = [
-      "aquaskk"
       "discord"
       "docker"
       "firefox"
