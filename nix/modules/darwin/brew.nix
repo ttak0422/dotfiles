@@ -34,6 +34,7 @@ rec {
     casks = [
       "aquaskk"
       "discord"
+      "docker"
       "firefox"
       "font-plemol-jp"
       "font-plemol-jp-hs"
