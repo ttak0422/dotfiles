@@ -64,11 +64,11 @@ build-nix-darwin-with-trace: install-nix install-rosetta
 
 .PHONY: apply-nix-darwin
 apply-nix-darwin: clean-nix-builtin-conf build-nix-darwin
-		./result/sw/bin/darwin-rebuild switch --flake .#darwin
+		sudo ./result/sw/bin/darwin-rebuild switch --flake .#darwin
 
 .PHONY: apply-nix-darwin-with-trace
 apply-nix-darwin-with-trace: clean-nix-builtin-conf build-nix-darwin-with-trace
-		./result/sw/bin/darwin-rebuild switch --flake .#darwin
+		sudo ./result/sw/bin/darwin-rebuild switch --flake .#darwin
 
 .PHONY: apply-latest-nvim-darwin
 apply-latest-nvim-darwin: update-dotfiles-nvim apply-nix-darwin

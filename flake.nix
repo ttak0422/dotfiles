@@ -3,7 +3,7 @@
 
   inputs = {
     # NIX
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-24.11";
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-25.05";
     nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
     systems.url = "github:nix-systems/default";
     flake-utils.url = "github:numtide/flake-utils";
@@ -13,12 +13,12 @@
       flake = false;
     };
     home-manager = {
-      url = "github:nix-community/home-manager/release-24.11";
+      url = "github:nix-community/home-manager/release-25.05";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     # NIX (DARWIN)
     darwin = {
-      url = "github:LnL7/nix-darwin/master";
+      url = "github:LnL7/nix-darwin/nix-darwin-25.05";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     # mkAlias = {
@@ -27,11 +27,6 @@
     # };
     nix-homebrew = {
       url = "github:zhaofengli-wip/nix-homebrew";
-      inputs = {
-        nixpkgs.follows = "nixpkgs";
-        nix-darwin.follows = "darwin";
-        flake-utils.follows = "flake-utils";
-      };
     };
     homebrew-core = {
       url = "github:homebrew/homebrew-core";

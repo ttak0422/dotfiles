@@ -1,4 +1,6 @@
+{ user, ... }:
 {
+  system.primaryUser = user;
   system.defaults.NSGlobalDomain = {
     "com.apple.keyboard.fnState" = true;
     "com.apple.swipescrolldirection" = false;

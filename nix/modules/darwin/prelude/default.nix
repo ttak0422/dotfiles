@@ -7,7 +7,6 @@
     ./loginwindow.nix
     ./ng-global.nix
   ];
-  services.nix-daemon.enable = true;
   system.stateVersion = 5;
   users.users.${user}.home = "/Users/${user}";
   users.users.nix-infra.home = "/Users/${user}";
