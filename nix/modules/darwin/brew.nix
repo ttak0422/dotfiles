@@ -41,7 +41,6 @@ rec {
       "google-chrome"
       "jetbrains-toolbox"
       "karabiner-elements"
-      "neovide"
       "onedrive"
       "slack"
       "visual-studio-code"
