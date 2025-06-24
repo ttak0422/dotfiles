@@ -5,7 +5,7 @@
       nodejs_22
     ];
     file.".npmrc".text = ''
-      prefix = $HOME/.npm-packages
+      prefix = ''${HOME}/.npm-packages
     '';
   };
 }
