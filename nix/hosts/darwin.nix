@@ -53,6 +53,7 @@
                   ./../modules/hm/git
                   ./../modules/hm/shell
                   ./../modules/hm/tool
+                  ./../modules/hm/services
                 ];
                 home = {
                   username = user;
