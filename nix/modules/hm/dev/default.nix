@@ -10,4 +10,5 @@
     ./python.nix
     ./rust.nix
   ];
+  programs.mise.enable = true;
 }
