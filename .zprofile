@@ -18,6 +18,10 @@ if [[ -f /opt/homebrew/bin/brew ]]; then
   export PATH=$PATH:/opt/homebrew/bin:/opt/homebrew/sbin
 fi
 
+if [ -f "$HOME/.profile" ]; then
+  source "$HOME/.profile"
+fi
+
 if [[ "$(uname)" == "Darwin" ]]; then
   # HACK: for neovim (see: https://github.com/yetone/avante.nvim/issues/315#issuecomment-2315957174)
   export XDG_RUNTIME_DIR="/tmp/"
