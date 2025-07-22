@@ -2762,11 +2762,11 @@
         "winshift-nvim": "winshift-nvim"
       },
       "locked": {
-        "lastModified": 1753108449,
-        "narHash": "sha256-R3xHiIuKYCWeJZbw4LF8/pHYwL45jObj7pzPg6Sbu4M=",
+        "lastModified": 1753196488,
+        "narHash": "sha256-sohX5x+WPfz4+CgZ3/woOT0hmc2LUmouu7bT6kywldw=",
         "owner": "ttak0422",
         "repo": "dotfiles-nvim",
-        "rev": "81302ddd4fd084fc2e253bc0aedf7dc7164b1625",
+        "rev": "41528aae955f3ed4eca2bd7a8991e60b4c6966b1",
         "type": "github"
       },
       "original": {
@@ -5563,11 +5563,11 @@
     },
     "nixpkgs-nightly": {
       "locked": {
-        "lastModified": 1751984180,
-        "narHash": "sha256-LwWRsENAZJKUdD3SpLluwDmdXY9F45ZEgCb0X+xgOL0=",
+        "lastModified": 1752950548,
+        "narHash": "sha256-NS6BLD0lxOrnCiEOcvQCDVPXafX1/ek1dfJHX1nUIzc=",
         "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "9807714d6944a957c2e036f84b0ff8caf9930bc0",
+        "rev": "c87b95e25065c028d31a94f06a62927d18763fdf",
         "type": "github"
       },
       "original": {
