@@ -44,6 +44,14 @@
       url = "github:homebrew/homebrew-bundle";
       flake = false;
     };
+    brew-nix = {
+      url = "github:BatteredBunny/brew-nix";
+      inputs.brew-api.follows = "brew-api";
+    };
+    brew-api = {
+      url = "github:BatteredBunny/brew-api";
+      flake = false;
+    };
     # NIX (LINUX)
     nixos-hardware.url = "github:NixOS/nixos-hardware";
     zen-browser.url = "github:0xc000022070/zen-browser-flake";

@@ -12,9 +12,6 @@ export VOLTA_HOME=$HOME/.volta
 export PATH=$VOLTA_HOME/bin:$PATH
 
 if [[ -f /opt/homebrew/bin/brew ]]; then
-  # eval $(/opt/homebrew/bin/brew shellenv)
-  # export PATH=${PATH#/opt/homebrew/bin:}
-  # export PATH=${PATH#/opt/homebrew/sbin:}
   export HOMEBREW_PREFIX="/opt/homebrew";
   export HOMEBREW_CELLAR="/opt/homebrew/Cellar";
   export HOMEBREW_REPOSITORY="/opt/homebrew/Library/.homebrew-is-managed-by-nix";

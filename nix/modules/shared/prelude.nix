@@ -29,6 +29,7 @@ in
   nixpkgs = {
     overlays = [
       inputs.hyprpanel.overlay
+      inputs.brew-nix.overlays.default
       (
         final: prev:
         let

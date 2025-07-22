@@ -1,6 +1,7 @@
 {
   user,
   inputs,
+  pkgs,
   ...
 }:
 let
@@ -54,4 +55,8 @@ rec {
       brewfile = true;
     };
   };
+  # experimental
+  environment.systemPackages = with pkgs.brewCasks; [
+    neovide-app
+  ];
 }
