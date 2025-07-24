@@ -8,10 +8,10 @@
     <array>
       <string>/bin/launchctl</string>
       <string>setenv</string>
-      <string>NEOVIDE_FRAMELESS</string>
+      <string>NEOVIDE_TITLE_HIDDEN</string>
       <string>true</string>
       <string>NEOVIDE_FRAME</string>
-      <string>none</string>
+      <string>buttonless</string>
       <string>NEOVIDE_MULTIGRID</string>
       <string>true</string>
     </array>
