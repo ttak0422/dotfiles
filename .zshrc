@@ -32,3 +32,5 @@ zstyle :prompt:error color '#F5C77E'
 zstyle :prompt:success color '#87CEEB'
 PURE_PROMPT_SYMBOL="❯❯❯"
 prompt pure
+
+echo -ne '\e[6 q'
