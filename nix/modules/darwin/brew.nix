@@ -23,7 +23,6 @@ rec {
     taps = {
       "homebrew/homebrew-core" = homebrew-core;
       "homebrew/homebrew-cask" = homebrew-cask;
-      "homebrew/homebrew-cask-fonts" = homebrew-cask-fonts;
       "homebrew/homebrew-bundle" = homebrew-bundle;
     };
     mutableTaps = false;
@@ -49,7 +48,7 @@ rec {
       "zen"
     ];
     onActivation = {
-      cleanup = "zap";
+      # cleanup = "zap";
     };
     global = {
       brewfile = true;
