@@ -11,6 +11,8 @@ export PATH=~/.npm-packages/bin:$PATH
 export VOLTA_HOME=$HOME/.volta
 export PATH=$VOLTA_HOME/bin:$PATH
 
+export BAT_THEME="ansi"
+
 if [[ -f /opt/homebrew/bin/brew ]]; then
   export HOMEBREW_PREFIX="/opt/homebrew";
   export HOMEBREW_CELLAR="/opt/homebrew/Cellar";
