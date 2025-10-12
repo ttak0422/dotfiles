@@ -25,7 +25,7 @@
             ; {:key :s :mods :CTRL :action (act.SendString "\027[19;5u")}
             ]
       window_padding {:left 5 :right 5 :top 5 :bottom 0}
-      default_prog [:zsh :-l :-c "zellij attach --index 0 --create"]
+      ;; default_prog [:zsh :-l :-c "zellij attach --index 0 --create"]
       morimo {:foreground "#b5D2a9"
               :background "#2a2a2e"
               :cursor_bg "#98b18e"
