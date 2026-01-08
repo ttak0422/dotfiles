@@ -2,9 +2,10 @@
 {
   home.packages = with pkgs; [
     coreutils-full # - cat, ls, mv, wget, ...
+    findutils # ------ GNU find, xargs, locate, updatedb
     gnugrep
     gnumake
-    findutils # ------ GNU find, xargs, locate, updatedb
     gnused
+    wget
   ];
 }
