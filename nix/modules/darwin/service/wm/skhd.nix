@@ -34,7 +34,7 @@ in
 
       ${mod} - z : yabai -m window --toggle zoom-fullscreen
       ${mod} - f : yabai -m window --toggle float && yabai -m window --grid 10:10:1:1:8:8
-      ${mod} - left : yabai -m window --toggle float && yabai -m window --grid 10:10:0:0:5:10
+      ${mod} - left : yabai -m window --toggle float && yabai -m window --grid 100:200:1:1:198:98
       ${mod} - right : yabai -m window --toggle float && yabai -m window --grid 10:10:5:0:5:10
       ${mod} - v :/Applications/Neovide.app/Contents/MacOS/neovide --frame=none --multigrid
     '';
