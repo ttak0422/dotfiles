@@ -3,8 +3,9 @@ _: {
     enable = true;
     enableScriptingAddition = false;
     extraConfig = ''
-      yabai -m rule --add app='Finder' manage=off
       yabai -m rule --add app='AnyConnect' manage=off
+      yabai -m rule --add app='Finder' manage=off
+      yabai -m rule --add app='Neovide' manage=off
       yabai -m rule --add app='WezTerm' manage=off
       yabai -m config layout            bsp
       yabai -m config mouse_modifier    alt
