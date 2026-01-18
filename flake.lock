@@ -319,11 +319,11 @@
         "v2-mcp-hub": "v2-mcp-hub"
       },
       "locked": {
-        "lastModified": 1768714366,
-        "narHash": "sha256-j2XSiwF6LlM4BrpL58UL3q/R/+qJJypZs+Aakl/jApE=",
+        "lastModified": 1768746534,
+        "narHash": "sha256-ss5njBKON+UumJRI6c1IdFdTOZhDDLpjx9/Coht3dWw=",
         "owner": "ttak0422",
         "repo": "dotfiles-nvim",
-        "rev": "783f694d1f29dc49741c3f0afe7fa75b1651abfc",
+        "rev": "fa57690e4ca86c957c612dad644f9412350ff072",
         "type": "github"
       },
       "original": {
@@ -2095,11 +2095,11 @@
         "nixpkgs": "nixpkgs_4"
       },
       "locked": {
-        "lastModified": 1767539980,
-        "narHash": "sha256-HJaj9wi0FZB9vvHpeQFeDZAth5Qi3QrlFJJiiqGl5/8=",
+        "lastModified": 1768609741,
+        "narHash": "sha256-FUf4WfIBsnCBt2Ma2P7c5FM8oHzmtnYRRcwJrEvNeU8=",
         "owner": "Saghen",
         "repo": "blink.cmp",
-        "rev": "6a4914ca987453464a7dfc7fc237a992adb567d0",
+        "rev": "820f1ddf634ec267412e403711bf74be26cac677",
         "type": "github"
       },
       "original": {
