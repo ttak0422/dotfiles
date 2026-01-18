@@ -68,6 +68,7 @@
 
     # MY PACKAGES
     dotfiles-nvim.url = "github:ttak0422/dotfiles-nvim";
+    dotfiles-nvim-2025.url = "github:ttak0422/nix-neovim-2025";
     yaskkserv2-service = {
       url = "github:ttak0422/yaskkserv2-service";
       inputs = {
