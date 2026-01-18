@@ -8,7 +8,6 @@ let
   inherit (inputs)
     homebrew-core
     homebrew-cask
-    homebrew-cask-fonts
     homebrew-bundle
     ;
 in
