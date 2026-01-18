@@ -21,6 +21,7 @@ in
       ];
       substituters = [ "https://nix-community.cachix.org" ];
       trusted-public-keys = [ "nix-community.cachix.org-1:mB9FSh9qf2dCimDSUo8Zy7bkq5CX+/rkCWyvRCYg3Fs=" ];
+      download-buffer-size = 524288000;
     };
     extraOptions = ''
       ${if pkgs.stdenv.isDarwin then "extra-platforms = aarch64-darwin x86_64-darwin" else ""}
