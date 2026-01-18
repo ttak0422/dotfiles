@@ -55,11 +55,6 @@
     hyprpanel.url = "github:Jas-SinghFSU/HyprPanel";
 
     # PACKAGES
-    zjstatus = {
-      url = "github:dj95/zjstatus";
-      inputs.nixpkgs.follows = "nixpkgs";
-      inputs.flake-utils.follows = "flake-utils";
-    };
     skk-dev-dict = {
       url = "github:skk-dev/dict";
       flake = false;
