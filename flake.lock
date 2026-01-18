@@ -319,11 +319,11 @@
         "v2-mcp-hub": "v2-mcp-hub"
       },
       "locked": {
-        "lastModified": 1768695853,
-        "narHash": "sha256-kXMQP6VTMdFoDNk6RmPkOio6qGg5D2eEl+X9q93PR90=",
+        "lastModified": 1768714366,
+        "narHash": "sha256-j2XSiwF6LlM4BrpL58UL3q/R/+qJJypZs+Aakl/jApE=",
         "owner": "ttak0422",
         "repo": "dotfiles-nvim",
-        "rev": "74388a95a86c2812240052d92499e15dc74513ac",
+        "rev": "783f694d1f29dc49741c3f0afe7fa75b1651abfc",
         "type": "github"
       },
       "original": {
