@@ -9,7 +9,7 @@
     ./yet-another.nix
   ];
   home.packages = with pkgs; [
-    ast-grep # ------- structual grep
+    ast-grep # ------- structural grep
     bottom # --------- system monitor
     d2 # ------------- modern diagram
     figlet # --------- ascii
