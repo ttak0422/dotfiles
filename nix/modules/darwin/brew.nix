@@ -32,7 +32,6 @@ rec {
     brews = [ "lunchy" ];
     casks = [
       "discord"
-      "docker"
       "firefox"
       "font-plemol-jp"
       "font-plemol-jp-hs"
