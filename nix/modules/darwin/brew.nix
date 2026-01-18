@@ -40,6 +40,7 @@ rec {
       "jetbrains-toolbox"
       "karabiner-elements"
       "onedrive"
+      "raycast"
       "slack"
       "visual-studio-code"
       "wezterm"
