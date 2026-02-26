@@ -320,14 +320,17 @@
         "v2-pterm": "v2-pterm"
       },
       "locked": {
-        "lastModified": 1772038524,
-        "narHash": "sha256-lVQ5GBGk8Y6gVIxcBoZPJbFFiL8GJVu5Bn5lhm3mgGg=",
-        "path": "/Users/tak/ghq/github.com/ttak0422/dotfiles-nvim",
-        "type": "path"
+        "lastModified": 1772038219,
+        "narHash": "sha256-3wlzWOmcxw5u1LPi/ycdxt4jXDam0qrGVhiKpqc18cI=",
+        "owner": "ttak0422",
+        "repo": "dotfiles-nvim",
+        "rev": "cb2b4ccccfc2702d861b039920e8fda9250930fb",
+        "type": "github"
       },
       "original": {
-        "path": "/Users/tak/ghq/github.com/ttak0422/dotfiles-nvim",
-        "type": "path"
+        "owner": "ttak0422",
+        "repo": "dotfiles-nvim",
+        "type": "github"
       }
     },
     "dotfiles-nvim-2025": {
