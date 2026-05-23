@@ -23,7 +23,7 @@
     plantuml # ------- uml
     pwgen # ---------- password generator
     rlwrap # --------- readline wrapper
-    rtk # ------------ CLI proxy that reduces LLM token consumption by 60-90% on common dev commands
+    pkgs-unstable.rtk  # CLI proxy that reduces LLM token consumption by 60-90% on common dev commands
     tealdeer # ------- tldr: complete `man` command
     tokei # ---------- code count
     vhs # ------------ Tool for generating terminal GIFs with code
