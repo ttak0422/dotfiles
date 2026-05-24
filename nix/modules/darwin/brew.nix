@@ -36,6 +36,7 @@ rec {
       "font-plemol-jp"
       "font-plemol-jp-hs"
       "font-plemol-jp-nf"
+      "font-sf-mono"
       "google-chrome"
       "jetbrains-toolbox"
       "karabiner-elements"

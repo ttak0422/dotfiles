@@ -50,6 +50,10 @@ setup-launch-agents-neovide:
 update-dotfiles-nvim: install-nix
 		nix flake update dotfiles-nvim
 
+.PHONY: update-homebrew
+update-homebrew: install-nix
+		nix flake update nix-homebrew homebrew-core homebrew-cask homebrew-bundle brew-nix brew-api
+
 .PHONY: clean-nix-builtin-conf
 clean-nix-builtin-conf:
 		@if [ -f $(NIX_CONF_PATH) ] && [ ! -L $(NIX_CONF_PATH) ]; then sudo rm -rf $(NIX_CONF_PATH); fi
