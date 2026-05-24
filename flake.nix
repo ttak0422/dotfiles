@@ -59,6 +59,10 @@
       url = "github:skk-dev/dict";
       flake = false;
     };
+    git-worktree-runner = {
+      url = "github:coderabbitai/git-worktree-runner";
+      flake = false;
+    };
     xremap.url = "github:xremap/nix-flake";
 
     # MY PACKAGES

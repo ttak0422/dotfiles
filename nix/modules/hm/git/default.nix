@@ -9,7 +9,10 @@ let
   configDir = ".config/git";
 in
 {
-  imports = [ ./tig.nix ];
+  imports = [
+    ./gtr.nix
+    ./tig.nix
+  ];
   home = {
     packages = with pkgs; [
       delta

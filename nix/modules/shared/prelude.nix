@@ -50,6 +50,9 @@ in
             config.allowUnfree = true;
           };
           zjstatus = inputs.zjstatus.packages.${system}.default;
+          git-gtr = final.callPackage ../../packages/git-gtr.nix {
+            src = inputs.git-worktree-runner;
+          };
           yaskkserv2-dictionary = prev.stdenv.mkDerivation {
             name = "yaskkserv2-dictionary";
             src = inputs.skk-dev-dict;
