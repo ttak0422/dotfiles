@@ -33,4 +33,8 @@
     required = true
   [credential]
     helper = ${if host.isDarwin then "osxkeychain" else "store"}
+  [gtr "editor"]
+    default = nvim
+  [gtr "ai"]
+    default = claude
   ''
