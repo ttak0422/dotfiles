@@ -45,7 +45,6 @@ rec {
       "slack"
       "visual-studio-code"
       "wezterm"
-      "zen"
     ];
     onActivation = {
       # cleanup = "zap";
