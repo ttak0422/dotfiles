@@ -269,11 +269,11 @@
         "v2-pterm": "v2-pterm"
       },
       "locked": {
-        "lastModified": 1779604783,
-        "narHash": "sha256-qzpPIraM7dccuJ4NTYFGmpk0oBn9mwm5+yvUcXFrakg=",
+        "lastModified": 1780418729,
+        "narHash": "sha256-X/R8a71BeiqgU4c4O97AH3GrFmSR0evgXtjBxvWbKbE=",
         "owner": "ttak0422",
         "repo": "dotfiles-nvim",
-        "rev": "80dde3474ab37365934900c5cc3a6d04c4558f01",
+        "rev": "7d74b0d557e02878ccd608891a1e54f3cabb4337",
         "type": "github"
       },
       "original": {
