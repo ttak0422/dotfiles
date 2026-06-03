@@ -9,6 +9,7 @@
     untrackedcache = true
     fsmonitor = false
     editor = nvim
+    quotepath = false
   [color]
     gi = auto
   [status]
