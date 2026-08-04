@@ -32,3 +32,5 @@ if [[ "$(uname)" == "Darwin" ]]; then
   # HACK: for neovim (see: https://github.com/yetone/avante.nvim/issues/315#issuecomment-2315957174)
   export XDG_RUNTIME_DIR="/tmp/"
 fi
+
+export PATH=$HOME/.opencode/bin:$PATH
