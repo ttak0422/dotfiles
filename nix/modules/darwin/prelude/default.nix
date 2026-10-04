@@ -11,6 +11,8 @@
   users.users.${user}.home = "/Users/${user}";
   users.users.nix-infra.home = "/Users/${user}";
   programs.zsh.enable = true;
+  # Home Manager initializes completion after assembling the user's fpath.
+  programs.zsh.enableGlobalCompInit = false;
   environment.systemPackages = with pkgs; [
     (runCommand "gsed" { } ''
       mkdir -p $out/bin

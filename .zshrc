@@ -26,7 +26,6 @@ alias ls="eza"
 alias tree="eza -T"
 alias "$"=""
 
-fpath+=("$HOME/.zsh/plugins/pure/share/zsh/site-functions")
 autoload -U promptinit; promptinit
 zstyle :prompt:error color '#F5C77E'
 zstyle :prompt:success color '#87CEEB'
