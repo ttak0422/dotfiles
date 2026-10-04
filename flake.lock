@@ -263,15 +263,16 @@
         "v2-blink-cmp": "v2-blink-cmp",
         "v2-mcp-hub": "v2-mcp-hub",
         "v2-meian": "v2-meian",
+        "v2-mimori": "v2-mimori",
         "v2-pterm": "v2-pterm",
         "v2-track": "v2-track"
       },
       "locked": {
-        "lastModified": 1791075693,
-        "narHash": "sha256-HChLo8KXjeJxymhc5oGxFpAPsXsc/EXlljK9FNkFd9Y=",
+        "lastModified": 1791084145,
+        "narHash": "sha256-BLe1hjdBFuM1RZvXGRR3bonx++2CZoMn5rB8DoEA/IY=",
         "owner": "ttak0422",
         "repo": "dotfiles-nvim",
-        "rev": "b41c0b4c01ec3a7404401d96afc6856b97b2d3c6",
+        "rev": "90bbd9558f7495545bae40a9c1f5c84ccb748e9f",
         "type": "github"
       },
       "original": {
@@ -2099,6 +2100,27 @@
       "original": {
         "owner": "ttak0422",
         "repo": "meian.nvim",
+        "type": "github"
+      }
+    },
+    "v2-mimori": {
+      "inputs": {
+        "nixpkgs": [
+          "dotfiles-nvim",
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1791073120,
+        "narHash": "sha256-0NFKi3kPQOqKarO+F8PlxxZhp1xJkv9fO9OCHzpFha8=",
+        "owner": "ttak0422",
+        "repo": "mimori",
+        "rev": "c5b0d92d511c41be3344a6660778c6ddaa4ab786",
+        "type": "github"
+      },
+      "original": {
+        "owner": "ttak0422",
+        "repo": "mimori",
         "type": "github"
       }
     },
