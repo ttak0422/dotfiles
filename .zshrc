@@ -30,6 +30,19 @@ autoload -U promptinit; promptinit
 zstyle :prompt:error color '#F5C77E'
 zstyle :prompt:success color '#87CEEB'
 PURE_PROMPT_SYMBOL="❯❯❯"
+
+# Configure vcs_info before Pure starts its async worker.
+# Show a short commit SHA instead of a tag or branch-relative name when detached.
+function +vi-detached-head-sha() {
+  if ! command git symbolic-ref -q HEAD >/dev/null 2>&1; then
+    local sha
+    sha=$(command git rev-parse --short HEAD 2>/dev/null) || return 0
+    hook_com[branch]=$sha
+  fi
+  return 0
+}
+zstyle ':vcs_info:git+post-backend:*' hooks detached-head-sha
+
 prompt pure
 
 echo -ne '\e[6 q'
