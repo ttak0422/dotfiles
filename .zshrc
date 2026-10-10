@@ -30,6 +30,13 @@ autoload -U promptinit; promptinit
 zstyle :prompt:error color '#F5C77E'
 zstyle :prompt:success color '#87CEEB'
 PURE_PROMPT_SYMBOL="❯❯❯"
+
+# Show a short SHA for detached checkouts; keep Pure's actionformats unchanged.
+zstyle -e ':vcs_info:git:*' formats '
+  reply=("%b" "%R" "%a")
+  command git symbolic-ref -q HEAD >/dev/null 2>&1 || reply[1]=$(command git rev-parse --short HEAD)
+'
+
 prompt pure
 
 echo -ne '\e[6 q'
