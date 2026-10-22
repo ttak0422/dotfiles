@@ -19,6 +19,11 @@ rec {
     inherit user;
     enable = true;
     enableRosetta = true;
+    # nix-homebrew derives this metadata from its own, unoverridden lock file.
+    package = inputs.nix-homebrew.inputs.brew-src // {
+      name = "brew-7.0.9";
+      version = "7.0.9";
+    };
     taps = {
       "homebrew/homebrew-core" = homebrew-core;
       "homebrew/homebrew-cask" = homebrew-cask;
