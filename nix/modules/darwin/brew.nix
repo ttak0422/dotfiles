@@ -29,7 +29,10 @@ rec {
   homebrew = {
     enable = true;
     taps = builtins.attrNames nix-homebrew.taps;
-    brews = [ "lunchy" ];
+    brews = [
+      "ca-certificates"
+      "lunchy"
+    ];
     casks = [
       "discord"
       "firefox"
@@ -43,11 +46,15 @@ rec {
       "onedrive"
       "raycast"
       "slack"
-      "visual-studio-code"
+      {
+        name = "visual-studio-code";
+        # Include VS Code even though its cask declares auto_updates.
+        greedy = true;
+      }
       "wezterm"
     ];
     onActivation = {
-      # cleanup = "zap";
+      upgrade = true;
     };
     global = {
       brewfile = true;
