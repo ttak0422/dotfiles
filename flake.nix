@@ -39,6 +39,8 @@
     # };
     nix-homebrew = {
       url = "github:zhaofengli-wip/nix-homebrew";
+      # Current core formulas use test-only resources introduced in Homebrew 7.0.9.
+      inputs.brew-src.url = "github:Homebrew/brew/7.0.9";
     };
     homebrew-core = {
       url = "github:homebrew/homebrew-core";
