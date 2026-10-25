@@ -26,6 +26,7 @@ in
   };
   nixpkgs = {
     overlays = [
+      (import ../../packages/jvm-runtimes.nix)
       inputs.hyprpanel.overlay
       inputs.brew-nix.overlays.default
       (
