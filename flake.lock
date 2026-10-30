@@ -2251,11 +2251,11 @@
         "yaskkserv2-src": "yaskkserv2-src"
       },
       "locked": {
-        "lastModified": 1768702628,
-        "narHash": "sha256-dP0BUSSn0T7h1Mg+VM/reMLt18HHOjzWfKKS/9i0Elg=",
+        "lastModified": 1793374761,
+        "narHash": "sha256-v2b09VACYfwYYbeY6WSzOYASLIdSs9dVBGlk05dLUnc=",
         "owner": "ttak0422",
         "repo": "yaskkserv2-service",
-        "rev": "7d94f7432e9e8279bc352657176836205c3b745f",
+        "rev": "c99e310881be6e13b4f6c48d74df5abd09ad4734",
         "type": "github"
       },
       "original": {
@@ -2267,11 +2267,11 @@
     "yaskkserv2-src": {
       "flake": false,
       "locked": {
-        "lastModified": 1747402433,
-        "narHash": "sha256-d037sMzr/9fa0Osl0ciQJT6FjdGlxqE7F/K+Iu+HJlw=",
+        "lastModified": 1791013959,
+        "narHash": "sha256-3jkB0I+Xp6OA3eQ/Nh6Sqr8DIF2LNpdHFWNLTZN9iYU=",
         "owner": "wachikun",
         "repo": "yaskkserv2",
-        "rev": "7341a0fd2e9d05f371de1dd0e797c92662e35443",
+        "rev": "08aabbc91a39c67ff2562b29f92c2a274bd0394b",
         "type": "github"
       },
       "original": {
