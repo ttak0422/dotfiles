@@ -265,11 +265,11 @@
         "v2-track": "v2-track"
       },
       "locked": {
-        "lastModified": 1792599469,
-        "narHash": "sha256-qpvLbwJyxiQhZPPqOLAU+zKZcow7gLhljVYWb50G3mU=",
+        "lastModified": 1793373826,
+        "narHash": "sha256-WcCWO0vDP67CA/Ty4MFnMIcvdMUcOG4406CLwSWxYmY=",
         "owner": "ttak0422",
         "repo": "dotfiles-nvim",
-        "rev": "02ac0aba79614c1a89cb9c07b1c227532588c314",
+        "rev": "3abe88de52cba08d685de96ae8a44fef85418697",
         "type": "github"
       },
       "original": {
@@ -1547,7 +1547,7 @@
         "type": "github"
       }
     },
-    "nixpkgs_14": {
+    "nixpkgs_13": {
       "locked": {
         "lastModified": 1743448293,
         "narHash": "sha256-bmEPmSjJakAp/JojZRrUvNcDX2R5/nuX6bm+seVaGhs=",
@@ -2283,7 +2283,7 @@
     "zen-browser": {
       "inputs": {
         "home-manager": "home-manager_3",
-        "nixpkgs": "nixpkgs_14"
+        "nixpkgs": "nixpkgs_13"
       },
       "locked": {
         "lastModified": 1744167671,
