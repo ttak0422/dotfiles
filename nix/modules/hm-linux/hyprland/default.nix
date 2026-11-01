@@ -1,4 +1,4 @@
-{ inputs', pkgs, ... }:
+{ pkgs, ... }:
 {
   imports = [
     ./hypridle.nix
@@ -29,7 +29,7 @@
       hyprsunset
       matugen
       # swww
-      inputs'.rose-pine-hyprcursor.packages.default
+      rose-pine-hyprcursor
     ];
   };
   wayland.windowManager.hyprland = {

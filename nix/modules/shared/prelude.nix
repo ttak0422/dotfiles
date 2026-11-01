@@ -27,7 +27,7 @@ in
   nixpkgs = {
     overlays = [
       inputs.hyprpanel.overlay
-      inputs.brew-nix.overlays.default
+      (import ../../overlays/custom-packages.nix { inherit inputs; })
       (
         final: prev:
         let
