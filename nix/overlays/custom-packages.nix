@@ -7,9 +7,4 @@ final: _prev:
     pkgs = final;
     brew-api = inputs.brew-api;
   };
-
-  # This input exposes no overlay; keep its recipe and source hash unchanged.
-  rose-pine-hyprcursor = final.callPackage "${inputs.rose-pine-hyprcursor}/nix/default.nix" {
-    nixpkgs = final;
-  };
 }
