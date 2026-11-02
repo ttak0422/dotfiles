@@ -187,11 +187,6 @@
               backupFileExtension = "bkp";
               users.${user} = {
                 imports = [
-                  inputs.hyprpanel.homeManagerModules.hyprpanel
-                  ./../../modules/hm-linux
-                  ./../../modules/hm-linux/apps.nix
-                  ./../../modules/hm-linux/hyprland
-                  ./../../modules/hm-linux/wezterm.nix
                   ./../../modules/hm/dev
                   ./../../modules/hm/git
                   ./../../modules/hm/shell
