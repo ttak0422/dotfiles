@@ -1,8 +1,5 @@
-{ inputs', pkgs, ... }:
+{ inputs', ... }:
 {
-  environment.systemPackages = [
-    (pkgs.writeShellScriptBin "nvim" ''
-      exec ${inputs'.dotfiles-nvim.packages.bundler-nvim-v2}/bin/nvim "$@"
-    '')
-  ];
+  # The complete upstream profile is available on aarch64-darwin only.
+  environment.systemPackages = [ inputs'.dotfiles-nvim.packages."v3/default" ];
 }
