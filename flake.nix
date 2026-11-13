@@ -94,6 +94,7 @@
       systems = builtins.filter (system: system != "x86_64-darwin") (import inputs.systems);
       imports = [
         ./nix/hosts/darwin.nix
+        ./nix/hosts/macbook.nix
         ./nix/hosts/linux-laptop
       ];
     };

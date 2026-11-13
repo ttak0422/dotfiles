@@ -1,0 +1,32 @@
+#!/bin/sh
+set -eu
+
+case "${1:-build}" in
+  build|switch) action=${1:-build} ;;
+  *) echo "Usage: $0 [build|switch]" >&2; exit 2 ;;
+esac
+if [ "$(id -u)" = 0 ]; then
+  echo "Run as the logged-in user, not with sudo." >&2
+  exit 1
+fi
+if [ "$(uname -s):$(uname -m)" != Darwin:arm64 ]; then
+  echo "This profile requires an Apple Silicon Mac." >&2
+  exit 1
+fi
+if ! command -v nix >/dev/null 2>&1; then
+  echo "Install Nix first; see docs/macbook.md (initial installation needs administrator access)." >&2
+  exit 1
+fi
+# Do not inherit an accidentally overridden USER or target another user's home.
+USER=$(id -un)
+export USER
+if [ "$HOME" != "/Users/$USER" ]; then
+  echo "Expected HOME=/Users/$USER; custom home paths require an explicit profile." >&2
+  exit 1
+fi
+cd "$(dirname "$0")/.."
+nix --extra-experimental-features 'nix-command flakes' build --impure \
+  --out-link result-macbook '.#homeConfigurations.macbook.activationPackage'
+if [ "$action" = switch ]; then
+  ./result-macbook/activate
+fi

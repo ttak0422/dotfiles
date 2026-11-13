@@ -18,3 +18,9 @@ outside that list are preserved (`cleanup = "none"`).
 
 VS Code extensions are managed separately. Run `code --update-extensions` to
 update installed extensions, then reload VS Code to use them.
+
+## Standalone MacBook
+
+For a new Apple Silicon Mac, see [the Home Manager setup](docs/macbook.md).
+Daily activation needs no sudo; the initial Nix installation needs administrator
+access. Existing nix-darwin hosts are kept separate.
