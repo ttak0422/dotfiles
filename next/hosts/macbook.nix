@@ -1,6 +1,10 @@
 { inputs, username, homeDirectory, ... }:
 {
-  imports = [ ../modules/darwin/base.nix ../modules/darwin/preferences.nix ];
+  imports = [
+    ../modules/darwin/base.nix
+    ../modules/darwin/preferences.nix
+    ../modules/darwin/fonts.nix
+  ];
   system.stateVersion = 6;
   system.primaryUser = username;
   users.users.${username}.home = homeDirectory;

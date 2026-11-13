@@ -36,7 +36,7 @@ retains selected Finder/Dock/keyboard preferences, Zsh completion and suggestion
 direnv, fzf, zoxide, Git conventions, terminal settings and Neovim v3. It does not
 promise full legacy parity: custom shell functions/abbreviations, prompt theme,
 worktree helpers, complete terminal keymaps/color scheme, Homebrew, GUI apps,
-fonts, window-manager services and SKK daemons are deliberately not migrated.
+window-manager services and SKK daemons are deliberately not migrated.
 Review those features individually rather than importing the old configuration.
 
 ## Privileges and initial installation
@@ -92,8 +92,12 @@ git config --file ~/.config/git/identity user.name 'YOUR NAME'
 git config --file ~/.config/git/identity user.email 'YOUR EMAIL'
 ```
 
-The terminal module supplies WezTerm configuration, not the app or fonts.
-Install those separately after reviewing their requirements.
+The terminal module supplies WezTerm configuration, not the application.
+Install the application separately. nix-darwin manages its configured font
+families through `modules/darwin/fonts.nix`: PlemolJP Console NF and JetBrains
+Mono. System activation installs them under `/Library/Fonts/Nix Fonts`; fonts
+outside that managed directory are left alone. Restart WezTerm after activation
+if its font list has not refreshed.
 
 ## Preferences and recovery
 
