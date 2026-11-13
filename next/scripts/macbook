@@ -14,7 +14,7 @@ if [ "$(uname -s):$(uname -m)" != Darwin:arm64 ]; then
   exit 1
 fi
 if ! command -v nix >/dev/null 2>&1; then
-  echo "Install Nix first; see docs/macbook.md (initial installation needs administrator access)." >&2
+  echo "Install Nix first; see next/README.md (initial installation needs administrator access)." >&2
   exit 1
 fi
 # Do not inherit an accidentally overridden USER or target another user's home.
@@ -27,10 +27,10 @@ if [ "$HOME" != "/Users/$DOTFILES_USERNAME" ]; then
 fi
 cd "$(dirname "$0")/.."
 nix --extra-experimental-features 'nix-command flakes' build --impure \
-  --out-link result-macbook --no-update-lock-file '.#darwinConfigurations.macbook.system'
+  --out-link result --no-update-lock-file '.#darwinConfigurations.macbook.system'
 if [ "$action" = switch ]; then
   # darwin-rebuild sets HOME to root's home. Pass only explicit target identity.
   sudo /usr/bin/env DOTFILES_USERNAME="$DOTFILES_USERNAME" DOTFILES_HOME="$DOTFILES_HOME" \
-    "$PWD/result-macbook/sw/bin/darwin-rebuild" switch \
+    "$PWD/result/sw/bin/darwin-rebuild" switch \
     --impure --no-update-lock-file --flake "$PWD#macbook"
 fi

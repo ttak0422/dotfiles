@@ -83,10 +83,3 @@ apply-nix-linux-laptop:
 
 .PHONY: apply-latest-nvim-linux-laptop
 apply-latest-nvim-linux-laptop: update-dotfiles-nvim apply-nix-linux-laptop
-
-.PHONY: build-macbook apply-macbook
-build-macbook:
-	./scripts/macbook-system build
-
-apply-macbook:
-	./scripts/macbook-system switch
