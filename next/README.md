@@ -21,7 +21,6 @@ next/
   modules/home/              shell, Git, tools, editor and terminal
   assets/                   owned configuration assets
   scripts/macbook            build/switch entry point
-  tests/                    mock, structure and evaluation checks
 ```
 
 Hosts compose modules, profiles select user features, and modules own their
@@ -72,8 +71,8 @@ Run the wrapper without sudo. It rejects root, non-Apple-Silicon hosts and
 nonstandard home paths. It derives the account from `id -un` and `/Users/<name>`,
 then passes `DOTFILES_USERNAME` and `DOTFILES_HOME` explicitly into impure
 resolution, including across sudo. It does not resolve the target from root's
-USER/HOME. `lib/mk-darwin.nix` also accepts literal account arguments for tests or
-future explicit host declarations.
+USER/HOME. `lib/mk-darwin.nix` also accepts literal account arguments for
+explicit host declarations.
 
 Switch first builds as the user, then runs the built `darwin-rebuild switch`
 with sudo. This records a system generation and activates it. Do not edit the
@@ -122,18 +121,16 @@ live preference domain.
 ## Validation and updates
 
 ```sh
-python3 tests/wrapper.py
-python3 tests/structure.py
-nix eval --impure --json --file tests/eval.nix
 ./scripts/macbook build
 ```
 
-Mock and structure tests never call real sudo or activate a system. Nix evaluation,
-build and macOS activation remain unverified. A successful build alone is not an
-activation test.
+Nix evaluation, build and macOS activation remain unverified. Review generated
+activation scripts before applying; a successful build alone does not establish
+correct activation.
 
 The independent lock starts with the repository's current pinned versions, not
 an implicit dependency upgrade. Review macOS compatibility and update inputs
-from this directory with `nix flake update` when ready. Updating `next/flake.lock`
+from this directory with
+`nix --extra-experimental-features 'nix-command flakes' flake update` when ready. Updating `next/flake.lock`
 does not update the legacy root lock. State-version values are compatibility
 settings, not package release selectors. No existing Mac is automatically migrated.
