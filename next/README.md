@@ -19,12 +19,15 @@ next/
   profiles/home.nix          user feature selection
   modules/darwin/            system settings and macOS preferences
   modules/home/              shell, Git, tools, editor and terminal
-  assets/                   owned configuration assets
   scripts/macbook            build/switch entry point
 ```
 
 Hosts compose modules, profiles select user features, and modules own their
-settings. Add future machines under `hosts/`; share only genuinely common
+settings. Keep text configuration inline with its owning Nix module using
+indented strings and language markers such as `# lua`; prefer typed Nix options
+when available. External files are reserved for assets that are unsuitable for
+inline text. The bootstrap script stays directly executable before Nix is ready.
+Add future machines under `hosts/`; share only genuinely common
 modules. Keep developer tools and Neovim configuration in dotfiles-nvim, consumed
 by `modules/home/editor.nix`, rather than duplicating language runtimes here.
 
