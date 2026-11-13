@@ -68,6 +68,31 @@ existing account, test import and rollback against a disposable domain, includin
 an undeclared sentinel key. Do not let nix-darwin and standalone Home Manager own
 the same preferences simultaneously. Some changes require logout/login.
 
+### Isolated preference probe
+
+This probe is **not yet run on macOS**. Run it from this checkout as your normal
+user before activating the profile:
+
+```sh
+sh tests/macbook-defaults.sh
+```
+
+It generates a fresh UUID-named `org.dotfiles.defaults-test.*` domain and refuses
+an existing one. It writes an original value and an undeclared sentinel, exports
+a snapshot, imports a partial plist, then checks whether the sentinel survived.
+It also imports the snapshot again and checks that original values return and
+the newly added key disappears. It never targets Finder, Dock, global or
+current-host preferences and does not restart applications or `cfprefsd`.
+
+The exit trap deletes only its generated domain and known temporary files, even
+when a check fails or the test is interrupted. A cleanup error prints the exact
+domain/path for inspection. Forced termination or a machine crash can prevent
+cleanup; use the printed test-domain name only, never substitute a real domain.
+A nonzero exit means do not activate the profile. Preserve the output to decide
+whether per-key updates or explicit recovery are needed. A pass validates only
+this macOS version's disposable-domain behavior, not Home Manager activation or
+application refresh; those still need separate verification.
+
 Removing a declaration does not restore its old value. Switching Home Manager
 generations restores declared values, not arbitrary previous macOS preferences.
 To recover a domain, inspect its saved plist, then explicitly import that snapshot
