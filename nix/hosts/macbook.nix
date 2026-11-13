@@ -1,8 +1,8 @@
 { inputs, ... }:
 {
-  # Only this output reads the invoking account; existing hosts remain pure.
-  flake.homeConfigurations.macbook = import ../lib/macbook-home.nix { inherit inputs; } {
-    username = builtins.getEnv "USER";
-    homeDirectory = builtins.getEnv "HOME";
+  # Explicit variables survive sudo without relying on root's USER or HOME.
+  flake.darwinConfigurations.macbook = import ../lib/macbook-system.nix { inherit inputs; } {
+    username = builtins.getEnv "DOTFILES_USERNAME";
+    homeDirectory = builtins.getEnv "DOTFILES_HOME";
   };
 }

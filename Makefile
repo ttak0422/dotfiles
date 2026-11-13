@@ -86,7 +86,7 @@ apply-latest-nvim-linux-laptop: update-dotfiles-nvim apply-nix-linux-laptop
 
 .PHONY: build-macbook apply-macbook
 build-macbook:
-	./scripts/macbook-home build
+	./scripts/macbook-system build
 
 apply-macbook:
-	./scripts/macbook-home switch
+	./scripts/macbook-system switch

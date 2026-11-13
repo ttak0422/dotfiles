@@ -6,7 +6,6 @@
     ../../hm/tool/yet-another.nix
     ../../hm/shell
     ../wezterm.nix
-    ./defaults.nix
   ];
 
   programs.home-manager.enable = true;
