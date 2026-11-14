@@ -68,9 +68,8 @@ git config --file "$HOME/.config/git/identity" user.name 'YOUR NAME'
 git config --file "$HOME/.config/git/identity" user.email 'YOUR EMAIL'
 ```
 
-Install [WezTerm](https://wezterm.org/installation.html) separately; its settings
-and fonts are supplied by this configuration. Complete application sign-ins and
-macOS permission prompts as needed.
+Open Ghostty after applying the configuration; its settings and fonts are included.
+Complete application sign-ins and macOS permission prompts as needed.
 
 ### macSKK and the local dictionary server
 
