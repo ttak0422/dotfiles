@@ -1020,7 +1020,7 @@
         "dotfiles-nvim": "dotfiles-nvim",
         "home-manager": "home-manager",
         "nixpkgs": "nixpkgs_4",
-        "yaskkserv2-src": "yaskkserv2-src"
+        "yaskkserv2": "yaskkserv2"
       }
     },
     "rust-analyzer-src": {
@@ -1315,8 +1315,12 @@
         "type": "github"
       }
     },
-    "yaskkserv2-src": {
-      "flake": false,
+    "yaskkserv2": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
       "locked": {
         "lastModified": 1791013959,
         "narHash": "sha256-3jkB0I+Xp6OA3eQ/Nh6Sqr8DIF2LNpdHFWNLTZN9iYU=",

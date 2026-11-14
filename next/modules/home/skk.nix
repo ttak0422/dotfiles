@@ -1,25 +1,6 @@
 { inputs, pkgs, ... }:
 let
-  # Upstream bumped Cargo.toml without updating its own lock entry.
-  lockFileContents = builtins.replaceStrings
-    [ "name = \"yaskkserv2\"\nversion = \"0.1.7\"" ]
-    [ "name = \"yaskkserv2\"\nversion = \"0.1.8\"" ]
-    (builtins.readFile "${inputs.yaskkserv2-src}/Cargo.lock");
-  # yaskkserv2 is not packaged in the pinned nixpkgs.
-  yaskkserv2 = pkgs.rustPlatform.buildRustPackage {
-    pname = "yaskkserv2";
-    version = "0.1.8";
-    src = inputs.yaskkserv2-src;
-    cargoLock = { inherit lockFileContents; };
-    postPatch = ''
-      cp ${pkgs.writeText "yaskkserv2-Cargo.lock" lockFileContents} Cargo.lock
-    '';
-    nativeBuildInputs = [ pkgs.pkg-config ];
-    buildInputs = [ pkgs.openssl ];
-    cargoBuildFlags = [ "--bin" "yaskkserv2" "--bin" "yaskkserv2_make_dictionary" ];
-    # Upstream tests download dictionaries and need network access.
-    doCheck = false;
-  };
+  yaskkserv2 = inputs.yaskkserv2.packages.${pkgs.stdenv.hostPlatform.system}.yaskkserv2;
   dictionary = pkgs.runCommand "yaskkserv2-dictionary" {
     nativeBuildInputs = [ yaskkserv2 ];
   } ''
