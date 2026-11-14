@@ -5,7 +5,7 @@ Mac. It has its own flake and lock file and does not import legacy dotfiles
 modules, shell scripts, Dhall files or assets. The repository's existing root
 flake and hosts remain unchanged.
 
-Draft: Nix evaluation/build and macOS activation are not yet verified. Do not
+Draft: the full system build and macOS activation are not yet verified. Do not
 apply to a live account until the checks below and generated activation scripts
 have been reviewed.
 
@@ -131,12 +131,14 @@ live preference domain.
 ./scripts/macbook build
 ```
 
-Nix evaluation, build and macOS activation remain unverified. Review generated
+Nix evaluation and a build dry-run passed with the matching 26.05 inputs. The
+full system build and macOS activation remain unverified. Review generated
 activation scripts before applying; a successful build alone does not establish
 correct activation.
 
-The independent lock starts with the repository's current pinned versions, not
-an implicit dependency upgrade. Review macOS compatibility and update inputs
+The system inputs track the matching Nixpkgs, nix-darwin and Home Manager 26.05
+release branches. Nixpkgs uses the macOS channel, `nixpkgs-26.05-darwin`.
+Review macOS compatibility and update inputs
 from this directory with
 `nix --extra-experimental-features 'nix-command flakes' flake update` when ready. Updating `next/flake.lock`
 does not update the legacy root lock. State-version values are compatibility
