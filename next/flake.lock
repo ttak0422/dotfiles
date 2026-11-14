@@ -1019,7 +1019,8 @@
         "darwin": "darwin",
         "dotfiles-nvim": "dotfiles-nvim",
         "home-manager": "home-manager",
-        "nixpkgs": "nixpkgs_4"
+        "nixpkgs": "nixpkgs_4",
+        "yaskkserv2-src": "yaskkserv2-src"
       }
     },
     "rust-analyzer-src": {
@@ -1311,6 +1312,23 @@
       "original": {
         "owner": "ttak0422",
         "repo": "track",
+        "type": "github"
+      }
+    },
+    "yaskkserv2-src": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1791013959,
+        "narHash": "sha256-3jkB0I+Xp6OA3eQ/Nh6Sqr8DIF2LNpdHFWNLTZN9iYU=",
+        "owner": "wachikun",
+        "repo": "yaskkserv2",
+        "rev": "08aabbc91a39c67ff2562b29f92c2a274bd0394b",
+        "type": "github"
+      },
+      "original": {
+        "owner": "wachikun",
+        "repo": "yaskkserv2",
+        "rev": "08aabbc91a39c67ff2562b29f92c2a274bd0394b",
         "type": "github"
       }
     }

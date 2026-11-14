@@ -6,6 +6,7 @@
     ../modules/home/tools.nix
     ../modules/home/editor.nix
     ../modules/home/terminal.nix
+    ../modules/home/skk.nix
   ];
   xdg.enable = true;
 }

@@ -72,8 +72,27 @@ Install [WezTerm](https://wezterm.org/installation.html) separately; its setting
 and fonts are supplied by this configuration. Complete application sign-ins and
 macOS permission prompts as needed.
 
-For macSKK, follow the [installation guide](https://github.com/mtgto/macSKK/blob/main/docs/guide/install.md)
-to configure dictionaries and enable its Hiragana and ABC modes. To use macSKK
+### macSKK and the local dictionary server
+
+Home Manager runs [yaskkserv2](https://github.com/wachikun/yaskkserv2) as your
+user at login, listening only on `127.0.0.1:1178`. Its read-only dictionary is
+built from nixpkgs' `skkDictionaries.l` (`SKK-JISYO.L`). Google Japanese Input
+and Google Suggest lookups are disabled, and `/etc/yaskkserv2.conf` is ignored;
+dictionary queries stay on this Mac. If migrating from the legacy configuration,
+retire its yaskkserv2 service before applying `next` so only one server owns port
+1178.
+
+After applying `next`, open macSKK's input menu → Settings → Dictionary.
+Enable **SKKServ**, open its **i** details, and set address **127.0.0.1**, TCP
+port **1178**, and both heading/request and response encodings to **EUC-JP**
+(older versions show a single encoding field). Run **Connection Test** and save
+the settings. See the [official dictionary settings](https://github.com/mtgto/macSKK/blob/main/docs/config/dictionary.md).
+These sandboxed app preferences are configured manually. Keep existing local
+dictionaries and the learned user dictionary `skk-jisyo.utf8`; no dictionary
+needs to be copied into the app container for SKKServ.
+
+Follow the [installation guide](https://github.com/mtgto/macSKK/blob/main/docs/guide/install.md)
+to enable macSKK's Hiragana and ABC modes. To use macSKK
 as the only input source, follow the [official FAQ](https://github.com/mtgto/macSKK/blob/main/docs/faq.md).
 Verify typing and mode switching before removing Apple's input sources. These
 input-source changes are manual, not part of `switch`.
