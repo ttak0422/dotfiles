@@ -7,8 +7,6 @@
     syntaxHighlighting.enable = true;
     defaultKeymap = "emacs";
     initContent = ''
-      # Check Git status locally without fetching in the background.
-      PURE_GIT_PULL=0
       fpath=(${pkgs.pure-prompt}/share/zsh/site-functions $fpath)
       autoload -Uz promptinit
       promptinit
