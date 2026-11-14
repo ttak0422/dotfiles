@@ -17,7 +17,7 @@
       imports = [ ../profiles/home.nix ];
       home = {
         inherit username homeDirectory;
-        stateVersion = "25.11";
+        stateVersion = "26.05";
       };
     };
   };
