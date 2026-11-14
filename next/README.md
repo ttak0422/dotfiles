@@ -110,13 +110,42 @@ dictionaries and retain a way to re-add Apple ABC before changing input sources.
 
 ## Build and apply
 
+No `ghq` installation is needed. Use its conventional checkout location so the
+repository is discoverable after the configuration installs `ghq`. Ensure Git
+is available (`git --version`); on a fresh Mac, complete the Command Line Tools
+installation if macOS prompts for it before continuing.
+
+PR #10 is not merged yet. The following commands check out its branch, not
+`main`. After merging, omit `--branch feat/macbook-home-manager` when cloning.
+The subshell stops if the destination already exists and never overwrites an
+existing checkout:
+
 ```sh
-git clone https://github.com/ttak0422/dotfiles.git
-cd dotfiles/next
-./scripts/macbook build
-# Review result/activate and generated settings before proceeding.
-./scripts/macbook switch
+(
+  set -eu
+  destination="$HOME/ghq/github.com/ttak0422/dotfiles"
+  if [ -e "$destination" ] || [ -L "$destination" ]; then
+    printf 'Checkout already exists; inspect it before continuing: %s\n' "$destination" >&2
+    exit 1
+  fi
+  mkdir -p "$HOME/ghq/github.com/ttak0422"
+  git clone --branch feat/macbook-home-manager \
+    https://github.com/ttak0422/dotfiles.git "$destination"
+  cd "$destination/next"
+  ./scripts/macbook build
+)
 ```
+
+Only after the build succeeds, review
+`$HOME/ghq/github.com/ttak0422/dotfiles/next/result/activate` and its generated
+settings. Apply separately, from any current directory:
+
+```sh
+cd "$HOME/ghq/github.com/ttak0422/dotfiles/next" && ./scripts/macbook switch
+```
+
+If the checkout already exists, inspect its branch and local changes before
+reusing it; do not delete, reset or replace it just to run these commands.
 
 Run the wrapper without sudo. It rejects root, non-Apple-Silicon hosts and
 nonstandard home paths. It derives the account from `id -un` and `/Users/<name>`,
