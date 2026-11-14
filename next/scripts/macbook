@@ -26,6 +26,10 @@ if [ "$HOME" != "/Users/$DOTFILES_USERNAME" ]; then
   exit 1
 fi
 cd "$(dirname "$0")/.."
+if [ "$action" = switch ] && [ ! -x /opt/homebrew/bin/brew ]; then
+  echo "Install Homebrew first; see next/README.md. Nothing has been activated." >&2
+  exit 1
+fi
 nix --extra-experimental-features 'nix-command flakes' build --impure \
   --out-link result --no-update-lock-file '.#darwinConfigurations.macbook.system'
 if [ "$action" = switch ]; then

@@ -4,6 +4,7 @@
     ../modules/darwin/base.nix
     ../modules/darwin/preferences.nix
     ../modules/darwin/fonts.nix
+    ../modules/darwin/apps.nix
   ];
   system.stateVersion = 6;
   system.primaryUser = username;

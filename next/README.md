@@ -35,7 +35,7 @@ Existing behavior is a reference, not an implementation dependency. This baselin
 retains selected Finder/Dock/keyboard preferences, Zsh completion and suggestions,
 direnv, fzf, zoxide, Git conventions, terminal settings and Neovim v3. It does not
 promise full legacy parity: custom shell functions/abbreviations, prompt theme,
-worktree helpers, complete terminal keymaps/color scheme, Homebrew, GUI apps,
+worktree helpers, complete terminal keymaps/color scheme, optional GUI apps,
 window-manager services and SKK daemons are deliberately not migrated.
 Review those features individually rather than importing the old configuration.
 
@@ -59,6 +59,54 @@ The installer requests privileges for the store and daemon. Reopen Terminal and
 check `nix --version`. The scripts here never install Nix. This profile assumes
 standard upstream Nix; independently managed Nix distributions need a separate
 ownership review before nix-darwin manages their settings.
+
+## Homebrew applications
+
+Install [Homebrew](https://docs.brew.sh/Installation) as your normal account
+before the first switch. nix-darwin manages its package list, not Homebrew itself:
+
+```sh
+curl --proto '=https' --tlsv1.2 -fL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh -o /tmp/homebrew-install
+less /tmp/homebrew-install
+/bin/bash /tmp/homebrew-install
+/opt/homebrew/bin/brew --version
+```
+
+The initial installer may request administrator access. Use the Apple Silicon
+prefix `/opt/homebrew`; do not run `brew` as root. A build does not require
+Homebrew, but the switch wrapper checks that it exists before activating.
+
+`modules/darwin/apps.nix` declares Chrome, OneDrive, ChatGPT, Slack,
+Karabiner-Elements and macSKK. Activation installs missing casks without upgrading
+existing ones, updating Homebrew metadata or removing unlisted packages. Casks are not
+pinned by `flake.lock`; this configuration does not disable application self-updaters.
+Install security updates promptly rather than waiting for a system switch.
+Review Homebrew-managed updates explicitly, for example:
+
+```sh
+/opt/homebrew/bin/brew update
+/opt/homebrew/bin/brew outdated --cask --greedy
+/opt/homebrew/bin/brew upgrade --cask --greedy google-chrome onedrive chatgpt slack karabiner-elements macskk
+```
+
+Some casks use system package installers and can request administrator access.
+Karabiner's required macOS permissions must be approved interactively. Existing
+manually installed apps may conflict with cask installation; inspect conflicts
+rather than forcing overwrite or removal. System generation rollback does not
+roll back Homebrew application versions or their data. Input sources and IME
+selection are not changed by this configuration.
+
+After installing macSKK, follow its [installation guide](https://github.com/mtgto/macSKK/blob/main/docs/guide/install.md)
+for dictionary setup and enabling its Hiragana and ABC modes. For macSKK-only
+input sources, follow the [official FAQ](https://github.com/mtgto/macSKK/blob/main/docs/faq.md):
+add both macSKK modes first, enable the English input mode of Apple's Japanese
+source, then remove Apple's ABC and Japanese sources in System Settings.
+Verify typing and mode switching before removing sources; keep a recovery input
+source until that verification succeeds. macSKK checks for updates but does not
+install them automatically; apply updates explicitly. No preference-file editing
+or automatic removal of Apple input sources is performed here. This does not
+guarantee the input method at login or FileVault unlock. Back up personal
+dictionaries and retain a way to re-add Apple ABC before changing input sources.
 
 ## Build and apply
 
