@@ -115,8 +115,7 @@ repository is discoverable after the configuration installs `ghq`. Ensure Git
 is available (`git --version`); on a fresh Mac, complete the Command Line Tools
 installation if macOS prompts for it before continuing.
 
-PR #10 is not merged yet. The following commands check out its branch, not
-`main`. After merging, omit `--branch feat/macbook-home-manager` when cloning.
+The following commands check out `main`.
 The subshell stops if the destination already exists and never overwrites an
 existing checkout:
 
@@ -129,7 +128,7 @@ existing checkout:
     exit 1
   fi
   mkdir -p "$HOME/ghq/github.com/ttak0422"
-  git clone --branch feat/macbook-home-manager \
+  git clone --branch main \
     https://github.com/ttak0422/dotfiles.git "$destination"
   cd "$destination/next"
   ./scripts/macbook build
