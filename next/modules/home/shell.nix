@@ -1,4 +1,4 @@
-{ ... }:
+{ pkgs, ... }:
 {
   programs.zsh = {
     enable = true;
@@ -6,7 +6,14 @@
     autosuggestion.enable = true;
     syntaxHighlighting.enable = true;
     defaultKeymap = "emacs";
-    initContent = "bindkey -e";
+    initContent = ''
+      # Check Git status locally without fetching in the background.
+      PURE_GIT_PULL=0
+      fpath=(${pkgs.pure-prompt}/share/zsh/site-functions $fpath)
+      autoload -Uz promptinit
+      promptinit
+      prompt pure
+    '';
   };
   programs.direnv = { enable = true; nix-direnv.enable = true; };
   programs.fzf = {

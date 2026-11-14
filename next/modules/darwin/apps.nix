@@ -2,6 +2,7 @@
 {
   homebrew = {
     enable = true;
+    enableZshIntegration = true;
     onActivation = {
       # Preserve applications installed outside this configuration.
       cleanup = "none";
