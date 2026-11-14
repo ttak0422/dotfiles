@@ -18,3 +18,7 @@ outside that list are preserved (`cleanup = "none"`).
 
 VS Code extensions are managed separately. Run `code --update-extensions` to
 update installed extensions, then reload VS Code to use them.
+
+## Next-generation setup
+
+The isolated MacBook configuration lives in [next/](next/README.md).

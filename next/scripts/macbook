@@ -1,0 +1,40 @@
+#!/bin/sh
+set -eu
+
+case "${1:-build}" in
+  build|switch) action=${1:-build} ;;
+  *) echo "Usage: $0 [build|switch]" >&2; exit 2 ;;
+esac
+if [ "$(id -u)" = 0 ]; then
+  echo "Run as the logged-in user, not with sudo." >&2
+  exit 1
+fi
+if [ "$(uname -s):$(uname -m)" != Darwin:arm64 ]; then
+  echo "This profile requires an Apple Silicon Mac." >&2
+  exit 1
+fi
+if ! command -v nix >/dev/null 2>&1; then
+  echo "Install Nix first; see next/README.md (initial installation needs administrator access)." >&2
+  exit 1
+fi
+# Do not inherit an accidentally overridden USER or target another user's home.
+DOTFILES_USERNAME=$(id -un)
+DOTFILES_HOME=$HOME
+export DOTFILES_USERNAME DOTFILES_HOME
+if [ "$HOME" != "/Users/$DOTFILES_USERNAME" ]; then
+  echo "Expected HOME=/Users/$DOTFILES_USERNAME; custom home paths require an explicit profile." >&2
+  exit 1
+fi
+cd "$(dirname "$0")/.."
+if [ "$action" = switch ] && [ ! -x /opt/homebrew/bin/brew ]; then
+  echo "Install Homebrew first; see next/README.md. Nothing has been activated." >&2
+  exit 1
+fi
+nix --extra-experimental-features 'nix-command flakes' build --impure \
+  --out-link result --no-update-lock-file '.#darwinConfigurations.macbook.system'
+if [ "$action" = switch ]; then
+  # darwin-rebuild sets HOME to root's home. Pass only explicit target identity.
+  sudo /usr/bin/env DOTFILES_USERNAME="$DOTFILES_USERNAME" DOTFILES_HOME="$DOTFILES_HOME" \
+    "$PWD/result/sw/bin/darwin-rebuild" switch \
+    --impure --no-update-lock-file --flake "$PWD#macbook"
+fi
