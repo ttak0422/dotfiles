@@ -10,6 +10,7 @@
       upgrade = false;
     };
     casks = [
+      "ghostty" # GPU-accelerated terminal emulator.
       "google-chrome" # Web browser.
       "onedrive" # Cloud file synchronization.
       "chatgpt" # ChatGPT desktop client.
