@@ -9,18 +9,12 @@
       upgrade = false;
     };
     casks = [
-      # Web browser.
-      "google-chrome"
-      # Cloud file synchronization.
-      "onedrive"
-      # ChatGPT desktop client.
-      "chatgpt"
-      # Team messaging.
-      "slack"
-      # Keyboard remapping.
-      "karabiner-elements"
-      # SKK Japanese input method.
-      "macskk"
+      "google-chrome" # Web browser.
+      "onedrive" # Cloud file synchronization.
+      "chatgpt" # ChatGPT desktop client.
+      "slack" # Team messaging.
+      "karabiner-elements" # Keyboard remapping.
+      "macskk" # SKK Japanese input method.
     ];
   };
 }
