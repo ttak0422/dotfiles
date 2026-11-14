@@ -11,6 +11,10 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     dotfiles-nvim.url = "github:ttak0422/dotfiles-nvim";
+    yaskkserv2 = {
+      url = "github:wachikun/yaskkserv2/08aabbc91a39c67ff2562b29f92c2a274bd0394b";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
   outputs = inputs: {
     darwinConfigurations.macbook = import ./lib/mk-darwin.nix { inherit inputs; } {
