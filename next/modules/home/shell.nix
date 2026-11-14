@@ -1,4 +1,4 @@
-{ ... }:
+{ pkgs, ... }:
 {
   programs.zsh = {
     enable = true;
@@ -6,7 +6,12 @@
     autosuggestion.enable = true;
     syntaxHighlighting.enable = true;
     defaultKeymap = "emacs";
-    initContent = "bindkey -e";
+    initContent = ''
+      fpath=(${pkgs.pure-prompt}/share/zsh/site-functions $fpath)
+      autoload -Uz promptinit
+      promptinit
+      prompt pure
+    '';
   };
   programs.direnv = { enable = true; nix-direnv.enable = true; };
   programs.fzf = {
