@@ -10,6 +10,8 @@
     macos-titlebar-style = hidden
     window-padding-x = 5
     window-padding-y = 5,0
+    cursor-color = cell-foreground
+    cursor-text = cell-background
     cursor-style = block
     cursor-style-blink = false
 
