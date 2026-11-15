@@ -29,6 +29,18 @@
     '';
   };
   programs.direnv = { enable = true; nix-direnv.enable = true; };
+  programs.atuin = {
+    enable = true;
+    enableZshIntegration = true;
+    flags = [ "--disable-up-arrow" ];
+    settings = {
+      ai.enabled = false;
+      auto_sync = false;
+      update_check = false;
+      enter_accept = false;
+    };
+  };
+  home.sessionVariables.FZF_CTRL_R_COMMAND = "";
   programs.fzf = {
     enable = true;
     defaultCommand = "fd --type f";
