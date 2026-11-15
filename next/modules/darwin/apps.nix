@@ -11,7 +11,6 @@
     };
     casks = [
       "ghostty" # GPU-accelerated terminal emulator.
-      "neovide" # Neovim GUI.
       "google-chrome" # Web browser.
       "onedrive" # Cloud file synchronization.
       "chatgpt" # ChatGPT desktop client.
