@@ -15,10 +15,8 @@
     cursor-style = block
     cursor-style-blink = false
 
-    keybind = ctrl+equal=increase_font_size:1
-    # Plus requires Shift on US (=) and JIS (;) layouts.
-    keybind = ctrl+shift+equal=increase_font_size:1
-    keybind = ctrl+shift+semicolon=increase_font_size:1
+    # Use unshifted JIS keys for font-size changes.
+    keybind = ctrl+semicolon=increase_font_size:1
     keybind = ctrl+minus=decrease_font_size:1
     keybind = alt+enter=toggle_fullscreen
     keybind = super+shift+f=toggle_fullscreen
