@@ -13,7 +13,30 @@
     includes = [ { path = "~/.config/git/identity"; } ];
   };
   programs.delta = { enable = true; enableGitIntegration = true; };
-  home.packages = with pkgs; [ gh ghq ];
+  home.packages = with pkgs; [
+    gh
+    ghq
+    tig # Browse Git history and stage changes interactively.
+  ];
+
+  xdg.configFile."tig/config".text = ''
+    set main-view = id date author:email-user commit-title:graph=yes,refs=yes
+    set main-view-date = custom
+    set main-view-date-format = "%y/%m/%d %H:%M"
+    set blame-view = date:default author:email-user id:yes,color line-number:yes,interval=1 text
+    set pager-view = line-number:yes,interval=1 text
+    set stage-view = line-number:yes,interval=1 text
+    set log-view = line-number:yes,interval=1 text
+    set blob-view = line-number:yes,interval=1 text
+    set diff-view = line-number:yes,interval=1 text:yes,commit-title-overflow=no
+
+    # Rebase commits after the selected commit, with confirmation.
+    bind main R ?git rebase -i %(commit)
+    bind diff R ?git rebase -i %(commit)
+
+    # Keep the existing commit-and-exit workflow.
+    bind status C <git commit
+  '';
   xdg.configFile."git/committemplate".text = ''
 
 
