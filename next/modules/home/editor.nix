@@ -4,7 +4,8 @@ let
 in
 {
   # Language runtimes, LSPs and editor configuration belong to dotfiles-nvim.
-  home.packages = [ nvim ];
+  # Nix provides the app bundle without installing Homebrew's Neovim dependency.
+  home.packages = [ nvim pkgs.neovide ];
 
   xdg.configFile."neovide/config.toml".text = ''
     frame = "none"
