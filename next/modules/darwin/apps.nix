@@ -19,6 +19,7 @@
       "macskk" # SKK Japanese input method.
       "omniwm" # Tiling window manager.
       "betterdisplay" # Display management.
+      "raycast" # Application launcher.
     ];
   };
 }
