@@ -67,11 +67,11 @@
         "v3-track": "v3-track"
       },
       "locked": {
-        "lastModified": 1794740002,
-        "narHash": "sha256-eVZPrCruok3b3DGBvcDjzAsR6XIZ2oLevgt+tDhYGHE=",
+        "lastModified": 1794741445,
+        "narHash": "sha256-+jCNz20d80a064sEH6eW6kGy2idH4bhCWsP9EXY4Pj8=",
         "owner": "ttak0422",
         "repo": "dotfiles-nvim",
-        "rev": "55b98dccdb2a1f9f29eefdaea2bc9f91cf86020c",
+        "rev": "e2f9d7fa71e45744ac3727e150ff2a36f8c3a873",
         "type": "github"
       },
       "original": {
