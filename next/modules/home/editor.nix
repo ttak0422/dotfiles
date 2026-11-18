@@ -1,6 +1,8 @@
 { inputs, pkgs, ... }:
 let
-  nvim = inputs.dotfiles-nvim.packages.${pkgs.stdenv.hostPlatform.system}."v3/default";
+  editors = inputs.dotfiles-nvim.packages.${pkgs.stdenv.hostPlatform.system};
+  nvim = editors."v3/default";
+  neovideNvim = editors."v3/neovide";
 in
 {
   # Language runtimes, LSPs and editor configuration belong to dotfiles-nvim.
@@ -9,6 +11,6 @@ in
 
   xdg.configFile."neovide/config.toml".text = ''
     frame = "none"
-    neovim-bin = "${nvim}/bin/nvim"
+    neovim-bin = "${neovideNvim}/bin/nvim"
   '';
 }

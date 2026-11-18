@@ -34,11 +34,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1794323990,
-        "narHash": "sha256-PI9bevqcrDnILMcdWzsDx/rCvepnP+bE3xkG+WhKCzg=",
+        "lastModified": 1795016436,
+        "narHash": "sha256-tMAANkT+87SUlWZZzJ8zJOzvugC6lgiBqlBiFAGb144=",
         "owner": "ttak0422",
         "repo": "divine",
-        "rev": "fdd6e9f88d2578862c31ca22f88495051d7b0b02",
+        "rev": "8a76c2d122e34ad86d980d0a4333421a5089d54e",
         "type": "github"
       },
       "original": {
@@ -51,6 +51,7 @@
       "inputs": {
         "divine": "divine",
         "flake-parts": "flake-parts",
+        "git-worktree-runner": "git-worktree-runner",
         "jol": "jol",
         "junit-console": "junit-console",
         "nix-filter": "nix-filter",
@@ -67,11 +68,11 @@
         "v3-track": "v3-track"
       },
       "locked": {
-        "lastModified": 1794741445,
-        "narHash": "sha256-+jCNz20d80a064sEH6eW6kGy2idH4bhCWsP9EXY4Pj8=",
+        "lastModified": 1795016877,
+        "narHash": "sha256-ET3k5Y5VuPi3BW9IOawguzsuur56MpqXRGpA3hbU+VE=",
         "owner": "ttak0422",
         "repo": "dotfiles-nvim",
-        "rev": "e2f9d7fa71e45744ac3727e150ff2a36f8c3a873",
+        "rev": "48334dd8ec8729e7548817152064dd314d4fa2f8",
         "type": "github"
       },
       "original": {
@@ -317,6 +318,22 @@
       "original": {
         "owner": "cachix",
         "repo": "git-hooks.nix",
+        "type": "github"
+      }
+    },
+    "git-worktree-runner": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1778607508,
+        "narHash": "sha256-WlpJz0MCf6TU/YGERHgGOxKvdt27sLand9lpKanApSI=",
+        "owner": "coderabbitai",
+        "repo": "git-worktree-runner",
+        "rev": "828413f69f750c51b7c67e9ebcabb2e7c901227b",
+        "type": "github"
+      },
+      "original": {
+        "owner": "coderabbitai",
+        "repo": "git-worktree-runner",
         "type": "github"
       }
     },
@@ -699,11 +716,11 @@
         "nixpkgs": "nixpkgs_2"
       },
       "locked": {
-        "lastModified": 1794317391,
-        "narHash": "sha256-csBBlJNWxC6nUlchv89WIF2MTj7xUW20Ef/RbZj2CzQ=",
+        "lastModified": 1795013994,
+        "narHash": "sha256-nPTk1EuCcIM0pf2HnDxRHN5rbvqjUsIj9vwE3RkVJok=",
         "owner": "ttak0422",
         "repo": "pterm",
-        "rev": "f05c4a20abacc3046c7168f5aa210504d1f4dd69",
+        "rev": "772901ee59f71d6b0a0918565a312f8e88b1ba11",
         "type": "github"
       },
       "original": {
@@ -722,11 +739,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1794738822,
-        "narHash": "sha256-5bpjOY03/RUNXrQcTBaVlejXwXhICYa7ycAEIE38xS0=",
+        "lastModified": 1795015597,
+        "narHash": "sha256-7DsRJpJNkOkNmjG7TcM9b/KTEWfHtKYyEu2meK+9OTw=",
         "owner": "ttak0422",
         "repo": "track",
-        "rev": "8bdfc8fd4e4e6d63732b80d44088c5fc1649d1c3",
+        "rev": "f8fb886f934ea28aa19631aded103b1b2dd74ea2",
         "type": "github"
       },
       "original": {
