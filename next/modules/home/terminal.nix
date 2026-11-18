@@ -10,6 +10,8 @@
     macos-titlebar-style = hidden
     window-padding-x = 5
     window-padding-y = 5,0
+    # Match padding to adjacent cells (including Neovim backgrounds).
+    window-padding-color = extend
     cursor-color = cell-foreground
     cursor-text = cell-background
     cursor-style = block
