@@ -28,7 +28,7 @@ in
       "${configDir}/config".text = ''
         ${gitConfig {
           inherit email configDir;
-          inherit (pkgs.stdenv) isDarwin;
+          inherit (pkgs.stdenv.hostPlatform) isDarwin;
           name = username;
         }}
       '';
