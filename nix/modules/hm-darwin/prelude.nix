@@ -8,7 +8,7 @@
   ...
 }:
 {
-  home = lib.mkIf pkgs.stdenv.isDarwin {
+  home = lib.mkIf pkgs.stdenv.hostPlatform.isDarwin {
     # activation.aliasApplications =
     #   let
     #     hmApps = pkgs.buildEnv {
