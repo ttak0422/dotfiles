@@ -1,5 +1,24 @@
 .DEFAULT_GOAL := help
 
+# Fail before Make runs prerequisites, even for parallel builds.
+legacy_darwin_goals := update-homebrew clean-nix-builtin-conf \
+	install-rosetta setup-default-key-binding-dict setup-launch-agents-neovide \
+	build-nix-darwin build-nix-darwin-with-trace apply-nix-darwin \
+	apply-nix-darwin-with-trace apply-latest-nvim-darwin
+
+# A standalone input update at the root also fetches legacy inputs on macOS.
+ifneq ($(filter update-dotfiles-nvim,$(MAKECMDGOALS)),)
+ifeq ($(shell uname -s),Darwin)
+legacy_darwin_goals += update-dotfiles-nvim
+endif
+endif
+
+ifneq ($(filter $(legacy_darwin_goals),$(MAKECMDGOALS)),)
+ifneq ($(ALLOW_LEGACY_DARWIN),1)
+$(error Legacy macOS targets require ALLOW_LEGACY_DARWIN=1. For next use ./next/scripts/macbook build or switch)
+endif
+endif
+
 NIX_CONF_PATH := /etc/nix/nix.conf
 
 fail = \

@@ -6,10 +6,16 @@ macOS is supported on Apple Silicon (`aarch64-darwin`) only.
 Intel macOS (`x86_64-darwin`) is no longer supported; the flake excludes it and no longer provides Intel Darwin package sets or extra-platform configuration.
 The Linux host configuration targets `x86_64-linux`.
 
-## Updating Homebrew on macOS
+## Legacy macOS setup
 
-Homebrew and its taps are pinned by `nix-homebrew`; update the pins with
-`make update-homebrew`, then run `make apply-nix-darwin` to build and activate them.
+The root Makefile requires `ALLOW_LEGACY_DARWIN=1` for legacy macOS targets
+before it runs any prerequisites or fetches Nix inputs. For the next-generation
+setup, use `./next/scripts/macbook build` or `./next/scripts/macbook switch` instead.
+
+For a Mac intentionally kept on the legacy setup, Homebrew and its taps are
+pinned by `nix-homebrew`; update the pins with
+`make ALLOW_LEGACY_DARWIN=1 update-homebrew`, then run
+`make ALLOW_LEGACY_DARWIN=1 apply-nix-darwin` to build and activate them.
 Updating `flake.lock` alone does not change the active Homebrew installation.
 
 Activation upgrades the packages declared in `nix/modules/darwin/brew.nix`.
