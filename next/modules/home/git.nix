@@ -16,6 +16,7 @@
   home.packages = with pkgs; [
     gh
     ghq
+    onefetch
     tig # Browse Git history and stage changes interactively.
   ];
 
