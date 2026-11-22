@@ -8,8 +8,10 @@
     macos-option-as-alt = false
 
     macos-titlebar-style = hidden
-    window-padding-x = 5
-    window-padding-y = 5,0
+    window-padding-x = 0
+    window-padding-y = 0
+    # Center the cell grid within the space left over after fitting whole cells.
+    window-padding-balance = equal
     # Match padding to adjacent cells (including Neovim backgrounds).
     window-padding-color = extend
     cursor-color = cell-foreground
