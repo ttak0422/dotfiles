@@ -76,6 +76,14 @@ The full system build and activation on a fresh Mac have not yet been verified.
 Open Ghostty after applying the configuration; its settings and fonts are included.
 Complete application sign-ins and macOS permission prompts as needed.
 
+### Neru keyboard navigation
+
+After applying, quit Homerow if it is still running so it does not claim the
+same shortcut; apps already installed through Homebrew are left in place. If
+Homerow relaunches on login, turn off its login item. Run
+`neru doctor` and review the macOS permissions it reports for Neru. Use
+Command+Shift+Space for Hints. This configuration does not switch input sources.
+
 ### macSKK and the local dictionary server
 
 Home Manager runs [yaskkserv2](https://github.com/wachikun/yaskkserv2) as your

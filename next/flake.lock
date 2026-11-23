@@ -428,6 +428,26 @@
         "type": "github"
       }
     },
+    "neru": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1795409454,
+        "narHash": "sha256-/UFO0lGGSsLi2KsmwjCIWHbYQSsS6vmM8+NqjI5/fqw=",
+        "owner": "y3owk1n",
+        "repo": "neru",
+        "rev": "a456010908177bc2c137c226f01e224ee968f6f8",
+        "type": "github"
+      },
+      "original": {
+        "owner": "y3owk1n",
+        "repo": "neru",
+        "type": "github"
+      }
+    },
     "nix-filter": {
       "locked": {
         "lastModified": 1710156097,
@@ -575,6 +595,7 @@
         "darwin": "darwin",
         "dotfiles-nvim": "dotfiles-nvim",
         "home-manager": "home-manager",
+        "neru": "neru",
         "nixpkgs": "nixpkgs_3",
         "yaskkserv2": "yaskkserv2"
       }
