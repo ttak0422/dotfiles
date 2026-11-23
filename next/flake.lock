@@ -68,11 +68,11 @@
         "v3-track": "v3-track"
       },
       "locked": {
-        "lastModified": 1795394056,
-        "narHash": "sha256-dBoSiaZfVDoCaEhqtur7FQWUm9trx0yeJG2HaiLvCEc=",
+        "lastModified": 1795403575,
+        "narHash": "sha256-xbDcKHPhj093Wjx+0TaBul7LelsTuG1xBxBPETJqOWQ=",
         "owner": "ttak0422",
         "repo": "dotfiles-nvim",
-        "rev": "25100ae24f70f5d0b049a85aeb262bf4f1cbc3d4",
+        "rev": "e0e17d2fd54fbb31c1361197bc6f880487cb9e81",
         "type": "github"
       },
       "original": {
@@ -716,11 +716,11 @@
         "nixpkgs": "nixpkgs_2"
       },
       "locked": {
-        "lastModified": 1795013994,
-        "narHash": "sha256-nPTk1EuCcIM0pf2HnDxRHN5rbvqjUsIj9vwE3RkVJok=",
+        "lastModified": 1795400615,
+        "narHash": "sha256-ZVKGhHJhSwdNqdYhQJ386TbOpYnPe506MYzzGRcZeBk=",
         "owner": "ttak0422",
         "repo": "pterm",
-        "rev": "772901ee59f71d6b0a0918565a312f8e88b1ba11",
+        "rev": "4e6121a4ef82f39bad607f5d7e35291bbfb41219",
         "type": "github"
       },
       "original": {
