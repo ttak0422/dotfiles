@@ -20,6 +20,7 @@
       "omniwm" # Tiling window manager.
       "betterdisplay" # Display management.
       "raycast" # Application launcher.
+      "homerow" # Keyboard navigation for macOS UI elements.
     ];
   };
 }
