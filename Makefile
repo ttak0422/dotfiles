@@ -37,6 +37,10 @@ if_command_exists = \
 help:
 		@echo "dotfiles v5"
 
+.PHONY: preflight-next
+preflight-next:
+		@./next/scripts/preflight
+
 .PHONY: install-nix
 install-nix:
 		$(call if_command_exists,nix,\

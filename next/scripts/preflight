@@ -1,0 +1,12 @@
+#!/bin/sh
+set -eu
+
+require_file() {
+  if [ ! -f "$1" ]; then
+    printf 'Missing required file: %s\n%s\n' "$1" "$2" >&2
+    exit 1
+  fi
+}
+
+require_file "$HOME/.config/git/identity" \
+  'Set up your Git identity first; see next/README.md under "Clone and build".'

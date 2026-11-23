@@ -23,7 +23,20 @@ Complete each installer's prompts and printed next steps, then reopen Terminal.
 ## 2. Clone and build
 
 Git is required, but `ghq` is not. Run `git --version` and finish the Command
-Line Tools installation if macOS prompts for it, then run:
+Line Tools installation if macOS prompts for it.
+
+Set your Git identity in the private file included by this configuration:
+
+```sh
+mkdir -p "$HOME/.config/git"
+git config --file "$HOME/.config/git/identity" user.name 'YOUR NAME'
+git config --file "$HOME/.config/git/identity" user.email 'YOUR EMAIL'
+```
+
+Both `macbook build` and `macbook switch` check this file before starting a
+Nix build. From the repository root you can also run `make preflight-next`.
+
+Then clone and build:
 
 ```sh
 (
@@ -59,14 +72,6 @@ or applications conflict, inspect them rather than forcing an overwrite.
 The full system build and activation on a fresh Mac have not yet been verified.
 
 ## 4. Finish setup
-
-Set your Git identity in the private file included by this configuration:
-
-```sh
-mkdir -p "$HOME/.config/git"
-git config --file "$HOME/.config/git/identity" user.name 'YOUR NAME'
-git config --file "$HOME/.config/git/identity" user.email 'YOUR EMAIL'
-```
 
 Open Ghostty after applying the configuration; its settings and fonts are included.
 Complete application sign-ins and macOS permission prompts as needed.

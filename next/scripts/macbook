@@ -26,6 +26,7 @@ if [ "$HOME" != "/Users/$DOTFILES_USERNAME" ]; then
   exit 1
 fi
 cd "$(dirname "$0")/.."
+./scripts/preflight
 if [ "$action" = switch ] && [ ! -x /opt/homebrew/bin/brew ]; then
   echo "Install Homebrew first; see next/README.md. Nothing has been activated." >&2
   exit 1
