@@ -9,4 +9,9 @@
     nodejs # Node.js runtime, including npm and npx.
     htop # Monitor and manage running processes interactively.
   ];
+
+  home.file.".npmrc".text = ''
+    prefix = ''${HOME}/.npm-packages
+  '';
+  home.sessionPath = [ "$HOME/.npm-packages/bin" ];
 }
