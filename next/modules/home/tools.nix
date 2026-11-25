@@ -6,7 +6,7 @@
     fd # Find files and directories by name.
     ripgrep # Search file contents with regular expressions.
     sd # Find and replace text using regular expressions.
-    nodejs_22 # Node.js runtime, including npm and npx.
+    nodejs # Node.js runtime, including npm and npx.
     htop # Monitor and manage running processes interactively.
   ];
 }
