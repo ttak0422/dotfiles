@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ inputs, pkgs, ... }:
 {
   home.packages = with pkgs; [
     bat # View files with syntax highlighting.
@@ -7,6 +7,7 @@
     ripgrep # Search file contents with regular expressions.
     sd # Find and replace text using regular expressions.
     nodejs # Node.js runtime, including npm and npx.
+    inputs.slk.packages.${pkgs.stdenv.hostPlatform.system}.slk # Slack terminal client.
     htop # Monitor and manage running processes interactively.
   ];
 
