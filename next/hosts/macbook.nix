@@ -15,6 +15,7 @@
     extraSpecialArgs = { inherit inputs; };
     users.${username} = {
       imports = [ ../profiles/home.nix ];
+      dotfiles.skk.useYaskkserv2 = true;
       home = {
         inherit username homeDirectory;
         stateVersion = "26.05";
