@@ -68,11 +68,11 @@
         "v3-track": "v3-track"
       },
       "locked": {
-        "lastModified": 1795625247,
-        "narHash": "sha256-sgm5MCiD6Ojw60CNZdkHvKyF946UPwtsLPQlvZL1btU=",
+        "lastModified": 1795787473,
+        "narHash": "sha256-z6a/cz8dAvUmfuOLDmsqxtCQWzV3FEIS9bmnNZKo+2E=",
         "owner": "ttak0422",
         "repo": "dotfiles-nvim",
-        "rev": "b3270506b7cfba98d5043e11fd1126281296ef67",
+        "rev": "0142b0988515af20db81ad09da1faf96c456c7df",
         "type": "github"
       },
       "original": {
@@ -749,11 +749,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1778332995,
-        "narHash": "sha256-UBLTpcTAQ0fw/jb+7y2WAMzPZRzyfJ9TEjqJgD+oqGw=",
+        "lastModified": 1795699994,
+        "narHash": "sha256-KQlwNKFZow/jdNJSDU9HqeJPUHWYXvNzgsQSbmhJEtI=",
         "owner": "ttak0422",
         "repo": "meian.nvim",
-        "rev": "000a25009be81247c191e2b0ac5ce93ff67560fe",
+        "rev": "c4550cc1158fb94dfda89dc388371d3e57391ac8",
         "type": "github"
       },
       "original": {
