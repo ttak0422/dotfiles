@@ -86,22 +86,35 @@ Command+Shift+Space for Hints. This configuration does not switch input sources.
 
 ### macSKK and the local dictionary server
 
-Home Manager runs [yaskkserv2](https://github.com/wachikun/yaskkserv2) as your
-user at login, listening only on `127.0.0.1:1178`. Its read-only dictionary is
-built from nixpkgs' `skkDictionaries.l` (`SKK-JISYO.L`). Google Japanese Input
-and Google Suggest lookups are disabled, and `/etc/yaskkserv2.conf` is ignored;
-dictionary queries stay on this Mac. If migrating from the legacy configuration,
-retire its yaskkserv2 service before applying `next` so only one server owns port
-1178.
+Home Manager starts [azoo-key-skkserv](https://github.com/gitusp/azoo-key-skkserv)
+on `127.0.0.1:1179` at login. The pinned Apple Silicon CLI bundles the Zenzai
+model, and conversion happens locally. On the first build Nix downloads the
+upstream CLI archive (about 335 MB). The previous `yaskkserv2` launch agent is not
+enabled by default. Port 1178 is deliberately left unused by this profile so
+dotfiles-nvim does not mistake Azoo for the old EUC-JP server. Goda SKK uses
+its bundled dictionary when no server is listening on 1178.
 
 After applying `next`, open macSKK's input menu → Settings → Dictionary.
-Enable **SKKServ**, open its **i** details, and set address **127.0.0.1**, TCP
-port **1178**, and both heading/request and response encodings to **EUC-JP**
-(older versions show a single encoding field). Run **Connection Test** and save
-the settings. See the [official dictionary settings](https://github.com/mtgto/macSKK/blob/main/docs/config/dictionary.md).
-These sandboxed app preferences are configured manually. Keep existing local
-dictionaries and the learned user dictionary `skk-jisyo.utf8`; no dictionary
-needs to be copied into the app container for SKKServ.
+Enable **SKKServ**, open its **i** details, and configure:
+
+- Address: **127.0.0.1**
+- TCP port: **1179**
+- Heading/request encoding: **EUC-JP** (fixed on older macSKK versions)
+- Response encoding: **UTF-8**
+
+Run **Connection Test** and save the settings. See the
+[official dictionary settings](https://github.com/mtgto/macSKK/blob/main/docs/config/dictionary.md).
+macSKK can use only one SKK server at a time. To keep the familiar
+`SKK-JISYO.L` candidates, add it as a macSKK file dictionary alongside Azoo.
+Keep your existing learned dictionary. If you're comparing candidates, you can
+temporarily turn off saving SKKServ conversion history to the user dictionary.
+
+To roll back, set `dotfiles.skk.useYaskkserv2 = true;` in the user's Home
+Manager configuration and apply `next` again. This restores the local
+`SKK-JISYO.L` server with Google lookup disabled and turns off Azoo. Point
+macSKK back to `127.0.0.1:1178` and use **EUC-JP** for both directions.
+If migrating from a legacy configuration, stop any separately managed
+yaskkserv2 job; switching `next` only manages the Home Manager jobs it owns.
 
 Follow the [installation guide](https://github.com/mtgto/macSKK/blob/main/docs/guide/install.md)
 to enable macSKK's Hiragana and ABC modes. To use macSKK
