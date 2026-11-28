@@ -15,6 +15,7 @@
       url = "github:y3owk1n/neru";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    slk.url = "github:gammons/slk/v0.53.0";
     yaskkserv2 = {
       url = "github:wachikun/yaskkserv2/08aabbc91a39c67ff2562b29f92c2a274bd0394b";
       inputs.nixpkgs.follows = "nixpkgs";
