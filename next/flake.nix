@@ -21,6 +21,9 @@
     };
   };
   outputs = inputs: {
+    packages.aarch64-darwin.azoo-key-skkserv =
+      inputs.nixpkgs.legacyPackages.aarch64-darwin.callPackage ./packages/azoo-key-skkserv.nix { };
+
     darwinConfigurations.macbook = import ./lib/mk-darwin.nix { inherit inputs; } {
       username = builtins.getEnv "DOTFILES_USERNAME";
       homeDirectory = builtins.getEnv "DOTFILES_HOME";
