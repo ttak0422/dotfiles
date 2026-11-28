@@ -110,9 +110,7 @@ temporarily turn off saving SKKServ conversion history to the user dictionary.
 To roll back, set `dotfiles.skk.useYaskkserv2 = true;` in the user's Home
 Manager configuration and apply `next` again. This restores the local
 `SKK-JISYO.L` server with Google lookup disabled. The address, port and
-encodings stay the same, so there is no macSKK change on rollback. Goda SKK
-uses its bundled dictionary with either backend in this profile: its pinned
-server client expects EUC-JP responses, not UTF-8.
+encodings stay the same, so there is no macSKK change on rollback.
 
 If another process already listens at `127.0.0.1:1178`, the new job logs a
 conflict (search for `dotfiles-skk` in Console) without stopping that process.
