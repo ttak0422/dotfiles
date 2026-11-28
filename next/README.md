@@ -86,11 +86,10 @@ Command+Shift+Space for Hints. This configuration does not switch input sources.
 
 ### macSKK and the local dictionary server
 
-Home Manager starts [azoo-key-skkserv](https://github.com/gitusp/azoo-key-skkserv)
-on `127.0.0.1:1178` at login. The pinned Apple Silicon CLI bundles the Zenzai
-model, and conversion happens locally. On the first build Nix downloads the
-upstream CLI archive (about 335 MB). Home Manager manages one SKK job,
-`org.nix-community.home.skk-server`, for either backend.
+The MacBook profile starts [yaskkserv2](https://github.com/wachikun/yaskkserv2)
+on `127.0.0.1:1178` with the local `SKK-JISYO.L` dictionary and Google lookup
+disabled. Home Manager manages one SKK job, `org.nix-community.home.skk-server`,
+regardless of which backend is selected.
 
 After applying `next`, open macSKK's input menu → Settings → Dictionary.
 Enable **SKKServ**, open its **i** details, and configure:
@@ -102,15 +101,14 @@ Enable **SKKServ**, open its **i** details, and configure:
 
 Run **Connection Test** and save the settings. See the
 [official dictionary settings](https://github.com/mtgto/macSKK/blob/main/docs/config/dictionary.md).
-macSKK can use only one SKK server at a time. To keep the familiar
-`SKK-JISYO.L` candidates, add it as a macSKK file dictionary alongside Azoo.
-Keep your existing learned dictionary. If you're comparing candidates, you can
-temporarily turn off saving SKKServ conversion history to the user dictionary.
+Keep your existing learned dictionary.
 
-To roll back, set `dotfiles.skk.useYaskkserv2 = true;` in the user's Home
-Manager configuration and apply `next` again. This restores the local
-`SKK-JISYO.L` server with Google lookup disabled. The address, port and
-encodings stay the same, so there is no macSKK change on rollback.
+Azoo remains available: set `dotfiles.skk.useYaskkserv2 = false;` in
+`next/hosts/macbook.nix` and apply `next` again. This selects
+[azoo-key-skkserv](https://github.com/gitusp/azoo-key-skkserv) without changing
+the address, port or encodings in macSKK. Its pinned Apple Silicon CLI
+bundles the Zenzai model (about 335 MB at first build). When using Azoo,
+you can enable `SKK-JISYO.L` as a file dictionary in macSKK alongside it.
 
 If another process already listens at `127.0.0.1:1178`, the new job logs a
 conflict (search for `dotfiles-skk` in Console) without stopping that process.
