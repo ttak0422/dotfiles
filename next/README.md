@@ -87,18 +87,16 @@ Command+Shift+Space for Hints. This configuration does not switch input sources.
 ### macSKK and the local dictionary server
 
 Home Manager starts [azoo-key-skkserv](https://github.com/gitusp/azoo-key-skkserv)
-on `127.0.0.1:1179` at login. The pinned Apple Silicon CLI bundles the Zenzai
+on `127.0.0.1:1178` at login. The pinned Apple Silicon CLI bundles the Zenzai
 model, and conversion happens locally. On the first build Nix downloads the
-upstream CLI archive (about 335 MB). The previous `yaskkserv2` launch agent is not
-enabled by default. Port 1178 is deliberately left unused by this profile so
-dotfiles-nvim does not mistake Azoo for the old EUC-JP server. Goda SKK uses
-its bundled dictionary when no server is listening on 1178.
+upstream CLI archive (about 335 MB). Home Manager manages one SKK job,
+`org.nix-community.home.skk-server`, for either backend.
 
 After applying `next`, open macSKK's input menu → Settings → Dictionary.
 Enable **SKKServ**, open its **i** details, and configure:
 
 - Address: **127.0.0.1**
-- TCP port: **1179**
+- TCP port: **1178**
 - Heading/request encoding: **EUC-JP** (fixed on older macSKK versions)
 - Response encoding: **UTF-8**
 
@@ -111,10 +109,15 @@ temporarily turn off saving SKKServ conversion history to the user dictionary.
 
 To roll back, set `dotfiles.skk.useYaskkserv2 = true;` in the user's Home
 Manager configuration and apply `next` again. This restores the local
-`SKK-JISYO.L` server with Google lookup disabled and turns off Azoo. Point
-macSKK back to `127.0.0.1:1178` and use **EUC-JP** for both directions.
-If migrating from a legacy configuration, stop any separately managed
-yaskkserv2 job; switching `next` only manages the Home Manager jobs it owns.
+`SKK-JISYO.L` server with Google lookup disabled. The address, port and
+encodings stay the same, so there is no macSKK change on rollback. Goda SKK
+uses its bundled dictionary with either backend in this profile: its pinned
+server client expects EUC-JP responses, not UTF-8.
+
+If another process already listens at `127.0.0.1:1178`, the new job logs a
+conflict (search for `dotfiles-skk` in Console) without stopping that process.
+Stop the conflicting listener yourself; launchd will retry. You can inspect
+the job with `launchctl print "gui/$(id -u)/org.nix-community.home.skk-server"`.
 
 Follow the [installation guide](https://github.com/mtgto/macSKK/blob/main/docs/guide/install.md)
 to enable macSKK's Hiragana and ABC modes. To use macSKK
